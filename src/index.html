@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <title>Welcome to my Portfolio, feel free to browse around, looking at every single content and dropping some reviews</title>
+ 
+ <link rel="icon" sizes="32x32" href="" type="image/jpg">
+ 
+ <script src="/cdn_modules/jquery@3.6.0/jquery.min.js"></script>
+ <script  src="/cdn_modules/sass.js@0.11.1/sass.min.js"></script>
+    <script>
+      function compileSCSS() {
+        let sass = new Sass('/cdn_modules/sass.js@0.11.1/sass.worker.min.js');
+        $('link[rel="scss"]').each(function () {
+          let href = $(this).attr('href');
+          $.ajax({
+            url: href,
+            dataType: 'text'
+          }).then(function (data) {
+            sass.compile(data, function(result) {
+              $('#css').html(result.text || '');
+              console.log(result)
+            });
+          });
+        });
+      }
+    </script>
+    <style id="css"></style>
+ 
+ <link rel="scss" href="/src/styles/main.scss">
+  <link rel="stylesheet" href="/src/styles/style.css">
+
+ <link rel="stylesheet" href="">
+</head>
+<body>
+
+<header class="hd">
+ 
+ <div class="hd__tm">
+  <div><i class="hr"></i> <span class="dim">:</span> <i class="mn"></i> <span class="dim">:</span> <i class="sec"></i> <i class="mm"></i></div>
+ </div>
+ 
+ <nav class="hd__nv">
+  
+<div>
+ <button>Home</button>
+  <button>About</button>
+ <button >Contact</button>
+ <button>Github</button>
+ <button >Linkedin</button>
+ <button class="sign">Sign up</button>
+</div>
+<!-- mobile will be triggered by JS-->
+ </nav>
+ 
+ <div class="hd__intro">
+  <h1 class="hd__title"></h1>
+  <p>You can browse through our various projects and achievements, to see how we interfere and render numerous services.</p>
+  
+  <form action="" method="get">
+   <input type="saerch" name="" id="hd-in" placeholder="search..">
+   <input type="submit" value="Search now" id="hd-btn" disabled>
+  </form>
+ </div>
+ 
+ <div class="hd__img"></div>
+</header>
+
+
+<section class="sec1">
+ 
+ <div class="sm-div">
+ <h2>Stay productive and Motivated</h2>
+  <p class="sm-quote"></p>
+  
+  <div class="sm-btn">
+   <i class="sm-left"></i> <i class="sm-right"></i>
+  </div>
+ </div>
+ 
+ <div class="sm-card"></div>
+</section>
+
+<section class="sec2">
+ <div class="colab-img"></div>
+ <div class="colab">
+  <h1>We Collaborate At Every Level </h1>
+  <p>From plannings to startups to full grown enterprises, spreading your local business worldwide.</p>
+  
+  <button class="cl-btn">Explore more</button>
+ </div>
+
+ <div class="colab-close">
+  <h1>Coming Soon</h1>
+  <button class="cl-btn-close">go back</button>
+ </div>
+</section>
+
+<div class="ct">
+ <h2>Our Top Categories</h2>
+ <p>Our top and major products and services with discounts</p>
+</div>
+
+<!--only js goes down-->
+<script> compileSCSS()</script>
+<script src="/src/scripts/main.js" type="module"></script>
+<script src="/src/scripts/animate.js" type="module"></script>
+
+</body>
+</html>
