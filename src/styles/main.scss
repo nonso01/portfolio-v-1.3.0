@@ -1,0 +1,275 @@
+            /*---------Happy Coding don't delete everything this time 🙂--------------*/
+            
+//col
+$col_bg_1: rgba(40,40,40,1); 
+$col_bg_2: rgba(25,25,25,1);
+$col_tx_1: cornsilk;
+$col_tx_2: #ddd;
+$col_tx_3: #17FF9F; //grn
+$col_tx_4: #FFAD31; //org
+
+//others
+$w_mx: 1440px;
+$w_st: 100%;
+$H: 100vh;
+$ts: transparent;
+$bd: 1px solid $col_tx_3;
+$gtr: grid-template-rows;
+$gtc: grid-template-columns;
+$tech: "tech";
+$ubun: "ubuntu";
+$opn-sn: "openSans";
+$ft-sz: 15.899px;
+$rad: 0.629rem;
+$cn: center;
+$im: !important;
+$trans: all 200ms ease;
+
+//extra fonts
+@font-face {
+ font-family: $tech;
+ src: url("/assets/fonts/Technology.ttf");
+}
+@font-face {
+ font-family: $ubun;
+ src: url("/assets/fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+ font-family: $opn-sn;
+ src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+//mixin
+@mixin flex-df($dir,$jtf,$alg){
+ display: flex;
+ flex-flow: $dir;
+ justify-content: $jtf;
+ align-content: $alg;
+}
+@mixin grid-df($row,$col,$gap){
+ display: grid;
+ #{$gtr}: $row;
+ #{$gtc}: $col;
+ grid-gap: $gap;
+}
+
+@mixin btn-df($bgcol,$bghov,$texcol,$texhov,$sc,$rad){
+ background: $bgcol;
+ color: $texcol;
+ border-radius: $rad;
+ transition: $trans;
+ border: 1px solid $ts;
+ &:hover{
+  transition: $trans;
+  background: $bghov;
+  color: $texhov;
+  transform: scale($sc);
+ }
+}
+//normalize
+
+*{
+ box-sizing: border-box;
+ font-family: $opn-sn;
+ font-style: normal;
+ margin: 0;
+ padding: 0;
+ color: $col_tx_1;
+ outline-color: $ts; 
+ overflow: auto;
+  
+ border: 1px solid $col_tx_3;
+}
+
+html{
+  width: $w_mx;
+ min-height: $H;
+ font-size: $ft-sz;
+ background: $col_bg_1;
+ scroll-behavior: smooth;
+ body{
+  min-height: inherit;
+  padding: 1%;
+ }
+}
+
+@media (max-width: 360px){
+ html{
+  width: 100%;
+  min-height: $H;
+ }
+}
+
+.hd{
+ height: 35rem;
+ background: $col_bg_2;
+ border-radius: $rad;
+ padding: 1%;
+ @include grid-df(repeat(6,1fr),repeat(10,1fr),false);
+ 
+ &__tm{
+  grid-row: 1/2; 
+  grid-column: 1/2;
+  div{
+   background: $col_bg_1;
+   border-radius: $rad/2;
+   text-align: $cn;
+   .dim{opacity: 0.7;}
+   i,span{
+    font-family: $tech;
+    color: $col_tx_4;
+    font-size: 1.3rem;
+   }
+   .mm{
+    font-size: 0.6rem;
+    margin-left: 4px;
+  //  color: $col_tx_3;
+   }
+  }
+}
+
+ &__nv{
+  grid-row: 1/2; 
+  grid-column: 4/11;
+  div{
+   @include flex-df(row wrap,space-evenly ,$cn );
+   button{
+    flex: 0.15 1 auto;
+    height: 2.20rem;
+    font-family: $ubun;
+    font-weight: bold;
+    @include btn-df($ts,$col_tx_4,$col_tx_1,$col_bg_2,0.899,$rad/2);
+   }
+   .sign{color: $col_tx_4;}
+  }
+ }
+ 
+ &__intro{
+  grid-row: 3/7;
+  grid-column: 5/11;
+  @include flex-df(column wrap,space-evenly, $cn);
+  text-align: $cn;
+  padding: 1%;
+  p,h1{
+   line-height: 1.4;
+  }
+  form{
+   height: 18%;
+   width: 85%;
+   align-self: $cn;
+   background: $col_bg_1;
+   border-radius: $rad;
+   @include flex-df(row wrap, space-evenly,$cn);
+   input{
+    flex: 0.2 1 auto;
+    border-radius: $rad/2;
+   }
+   #hd-in{
+    background: $col_bg_1 url("/assets/icons/search_black_24dp.svg") no-repeat 0% 50%/24px;
+    padding: 1% 6%;
+    border: 1px solid $ts;
+   }
+   #hd-btn{
+    font-weight: 600;
+    @include btn-df($col_tx_4,$col_bg_1,$col_bg_2,$col_tx_4,0.899,$rad/2);
+   }
+  }
+ }
+ 
+ &__img{
+  grid-row: 4/7;
+  grid-column: 1/4;
+  background: $col_bg_2 url("/assets/my-logos/logo.png") no-repeat center/contain;
+ }
+}
+
+//media queries
+.sec1{
+ height: 20.014rem;
+ @include grid-df(repeat(4,1fr),repeat(7,1fr),false);
+ 
+ .sm-div{
+  grid-row: 2/5;
+  grid-column: 1/3;
+  @include flex-df(column wrap,space-evenly ,$cn );
+  text-align: $cn;
+  padding: 2%;
+  
+  .sm-btn{
+   width: 50%;
+  @include flex-df(row wrap,space-evenly ,$cn);
+  
+  i{ //add bg to all btn
+   height: 2.52rem;
+   width: 2.52rem;
+   border-radius: $H/2;
+   border: 2px solid;
+   transition: $trans;
+   &:hover{
+    transition: $trans;
+    transform: scale(0.8);
+    border-color: $col_tx_3;
+   }
+  }
+  }
+ }
+ 
+ .sm-card{
+  grid-row: 2/5;
+  grid-column: 4/8;
+    @include flex-df(row wrap,space-evenly ,$cn);
+    
+  .sm-cd{
+   background: $col_bg_2;
+   border-radius: $rad;
+   height: 85%;
+   width: 30%;
+   padding: 1%;
+   @include flex-df(column wrap,space-evenly ,$cn $im);
+   text-align: $cn;
+   h3{color: $col_tx_4;}
+   img{align-self: $cn;}
+  }
+ }
+}
+
+//media queries
+
+.sec2{
+ height: 25.16rem;
+ margin-top: 2rem; //top space
+ border-radius: $rad;
+ background: $col_bg_2;
+ padding: 2%;
+ text-align: $cn;
+ @include grid-df(1fr,1fr 1fr,1.8rem );
+ grid-auto-flow: columns;
+}
+
+.colab-img{
+ background: $ts url("/assets/images/trends-in-2021_1.jpeg") no-repeat border-box center/cover;
+ border: 2px solid $ts;
+ border-radius: $rad;
+}
+
+.colab,.colab-close{
+ @include flex-df(column wrap,space-evenly ,$cn );
+ h1{
+  color: $col_tx_4;
+ }
+ p{
+  font-size: 1.3rem;
+  font-weight: 500;
+ }
+ button{
+  width: 30%;
+  height: 12%;
+  align-self: $cn;
+  @include btn-df($col_tx_4,$col_bg_2,$col_bg_2,$col_tx_4,0.899,$rad/2);
+font-family: $ubun;
+font-weight: bold;
+ }
+}
+.colab{display: none $im;}
+
+//media queries
