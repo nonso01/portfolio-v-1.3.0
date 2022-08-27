@@ -31,19 +31,19 @@ const allData= {
    p:"Your payments are valued and are for the best of all."
   }
   ],
-  majorCardData_1: [
+ majorCardData_1: [
    {
     img: "/assets/images/webDev.jpeg",
     price: "$100",
     cancel: "$162",
-    h3: "Desktop and Mobile Web development, providing the best for your clients.",
+    h3: "Desktop and Mobile Web development.",
     review: "4.1k +"
    },
    {
-    img: "/assets/images/network-architecture.jpg",
+    img: "/assets/images/database.png",
     price: "$255",
     cancel: "$320",
-    h3: "Network architecture And data management , keeping your informations secured.",
+    h3: "Network architecture And data management.",
     review: "3.9k +"
    },
    {
@@ -57,48 +57,90 @@ const allData= {
     img: "/assets/images/teacher.jpg",
      price: "$100",
      cancel: "$150",
-     h3: "Owner of a school? and in need of professional science tutors search no more.",
+     h3: "Professional science tutorials and tutors.",
      review: "4.0k +"
    },
    {
     img: "/assets/images/Bg-unsplash.jpg",
      price: "$180",
      cancel: "$280",
-     h3: "Learn crypto and mining with while gaining",
+     h3: "Learn crypto and data mining while gaining",
      review: "3.5k +"
    },
    {
     img: "/assets/images/The-Role-of-Marketing-1_2.jpg",
      price: "$200",
      cancel: "$230",
-     h3: "Nothing can shake a business well planned no matter the odds, manage it with Us.",
+     h3: "Marketing and its affeliats boosting your business",
      review: "3.5k +"
    }
    ],
-  majorCardData_2: function(){
-   return this.majorCardData_1.sort(()=> 0.5 - Math.random())
-  },
-   projectData: [
+ projectData: [
     {
-     img: "",
-     h3:"",
-     p: "",
-     link: ""
+     img: "/assets/images/desktop-design_1.jpg",
+     h3:"Clipboard",
+     p: "A complete solution to the clipboard landing page",
+     link: "https://mt-frm.netlify.app"
     }
     ,{
-     img: "",
-     h3:"",
-     p: "",
-     link: ""
+     img: "/assets/images/dAgency.png",
+     h3:"D-agency",
+     p: "A fun project where i used EcmaScript for the first time",
+     link: "https://nonso01js.netlify.app/"
     }
     ,{
-     img: "",
-      h3: "",
-      p: "",
-      link: ""
+     img: "/assets/icons/wallet-dynamic-premium.png",
+      h3: "Order summary",
+      p: "My third frontendmentor challenge",
+      link: "https://github.com/nonso01/"
+    },
+    {
+     img: "/assets/my-logos/apple-touch-icon.png",
+     h3: "Nft Card",
+     p: "One of my first works during my frontend journey",
+     Link: "https://github.com/nonso01/"
     }
-    ]
-
+    ],
+ testimonialData:[
+   {
+    img: "/assets/icons/xxxx_1.png",
+    name: "Evelyn",
+    job:"Entrepreneur",
+    word:"Martin is much more than an enterprise to me! it's like a son and a child well trained."
+   },
+   {
+    img: "/assets/icons/xxxx_4.jpg",
+    name: "Shimul",
+    job:"Web developer",
+    word:"I learned about Martin not too long ago, probably a year, and am glad working and collaborating with them."
+   },
+   {
+   img: "/assets/icons/xxxx_5.jpeg",
+    name: "Precious",
+    job: "Medical doctor",
+    word: "Well as a medical personnel I have been working very closely with Martin, and all i can say is there are trust worthy." 
+   }],
+ languageData:[
+  {
+  img: "/assets/icons/html-5-logo-svgrepo-com.svg",
+  cls: "html",
+  percent: "90.10%"
+  },
+  {
+   img: "/assets/icons/css3-logo-svgrepo-com.svg",
+  cls: "css",
+  percent: "72.45%"
+  },
+  {
+   img: "/assets/icons/javascript-logo-svgrepo-com.svg",
+    cls: "js",
+    percent: "31.67%"
+  },
+  {//look for the official icon
+   img: "/assets/icons/bash.png",
+    cls: "bash",
+    percent: "19.77%"
+  }]
 }
 
 export default allData
