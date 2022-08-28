@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <title>Welcome to my Portfolio, feel free to browse around, looking at every single content and dropping some reviews</title>
+ 
+ <link rel="icon" sizes="32x32" href="/assets/my-logos/apple-touch-icon.png" type="image/jpg">
+ 
+
+ <link rel="scss" href="/src/styles/main.scss">
+  <link rel="stylesheet" href="/src/styles/main.css">
+
+ <link rel="stylesheet" href="">
+</head>
+<body>
+ <!--Caution: am not semantic and i make use of sections inappropriately -->
+
+<header class="hd">
+ 
+ <div class="hd__tm">
+  <div><i class="hr"></i> <span class="dim">:</span> <i class="mn"></i> <span class="dim">:</span> <i class="sec"></i> <i class="mm"></i></div>
+ </div>
+ 
+ <nav class="hd__nv">
+  
+<div>
+ <button>Home</button>
+  <button>About</button>
+ <button >Contact</button>
+ <button>Github</button>
+ <button >Linkedin</button>
+ <button class="sign">Sign up</button>
+</div>
+<!-- mobile will be triggered by JS-->
+ </nav>
+ 
+ <div class="hd__intro">
+  <h1 class="hd__title"></h1>
+  <p>You can browse through our various projects and achievements, to see how we interfere and render numerous services.</p>
+  
+  <form action="" method="get">
+   <input type="saerch" name="" id="hd-in" placeholder="search..">
+   <input type="submit" value="Search now" id="hd-btn" class="btn"disabled>
+  </form>
+ </div>
+ 
+ <div class="hd__img"></div>
+</header>
+
+
+<section class="sec1">
+ 
+ <div class="sm-div">
+ <h2>Stay productive and Motivated</h2>
+  <p class="sm-quote"></p>
+  
+  <div class="sm-btn">
+   <i class="sm-left"></i>
+   <i class="sm-right"> </i>
+  </div>
+ </div>
+ 
+ <div class="sm-card"></div>
+</section>
+
+<section class="sec2">
+ <div class="cl-img"></div>
+ <div class="cl_one_op">
+  <h1>We Collaborate At Every Level </h1>
+  <p>From plannings to startups to full grown enterprises, spreading your local business worldwide.</p>
+  
+  <button class="cl-btn btn btn">Explore more</button>
+ </div>
+
+ <div class="cl_two_clo">
+  <h1>Coming Soon</h1>
+  <p>Sorry there isn't much content to display for now.</p>
+  <button class="cl-btn-clo btn">go back</button>
+ </div>
+</section>
+
+<div class="ct">
+ <h2>Our Top Categories</h2>
+ <p>Our top and major products and services with discounts</p>
+</div>
+
+<section class="sec3"> <!--mj-card-->
+</section>
+
+<div class="br">
+ <button class="br-btn btn">Browse more</button>
+</div>
+
+<section class="sec4">
+ <div class="pj">
+  <h2>Projects</h2>
+ </div>
+ 
+ <div class="pj-sh"></div>
+</section>
+
+<!--testimonials will need to be triggered and treated with js and light-up too-->
+<section class="sec5">
+  
+  <article>
+   <div class="ts-say">
+   <h2>What Do People Say About <span class="me">Martin</span> ?</h2>
+   <p>Look at what our <span class="pl"></span> had to say</p>
+   </div>
+     <div class="ts-btn"><i class="ts-left"></i><i class="ts-right"></i></div>
+  </article>
+ 
+ <div class="ts-pl"></div>
+</section>
+ <!-- attached to testimonials-->
+<div class="rd-light">
+ <div class="light">
+ <i></i> <i></i><i></i>
+ <i class="light-up"></i><i></i> <i></i>
+ </div>
+</div>
+
+<!----><section class="sec6">
+ <canvas id="cnv"></canvas>
+
+  <div class="lang"></div>
+  <div class="lang-tl">
+   <h3>Our Current Technologies</h3>
+   <p>This are the tools we use currently and an insight of our current levels</p>
+   <button class="lang-btn btn">view more</button>
+  </div>
+</section>
+
+<div class="fancy-ab">
+ <span></span>
+ <h2>About Us</h2>
+ <span></span>
+</div>
+
+<section class="sec7">
+ <div class="myIco"></div>
+ <div class="abOne">
+  <div></div>
+  <section>
+   <p>If you scrolled right down to this section, then thanks for viewing this fancy page of mine. through out this page, I have been talking about <i>Martin</i> as an enterprise and actually am an enterprise of my own so are you!, it will be my pleasure, getting corrections from a senior dev. for more just send a mail  <i>Thanks Again!!</i></p>
+  </section>
+ </div>
+ 
+ <div class="abTwo">
+  <div class="ab-code">
+   <code>
+<!--might cause responsive issues-->
+
+    <div class="code"><i class="var">const</i> <i class="name">whoAmI</i> = {</div>
+    
+    <div class="code"><i class="name">name</i>: <i class="value">"look around"</i>,</div>
+    
+    <div class="code"><i class="name">age</i>: <i class="num">19.7</i>,</div>
+    
+    <div class="code"><i class="name">job</i>: <i  class="value">"jobless"</i>,</div>
+    
+   <div class="code"> <i class="method">whatNow</i>: <i class="num"> function()</i> {</div>
+   
+   <div class="code"> <i class="num">if</i>((<i class="var">this</i>.age<i class="num">></i><i class="num">20</i>)<i class="bool">&&</i>(<i class="var">this</i>.job<i class="num">===</i><i class="value">"jobless"</i>)){ </div>
+   <div class="code"><i class="var">return</i> <i class="var">this</i>.life<i class="num"> =</i> <i class="value">"i have no life"</i></div>
+     <span>  } </span>   <div class="code"><i class="num">else</i> <i class="var">return</i> <i class="var">this</i>.life<i class="num"> =</i> <i class="value">"i still have hope"</i></div>
+   <span> } } </span> <span class="comment">/* been looking at functional programming and OOP */</span>   
+   <div class="code"><i class="var">console</i>.<i class="method">log(<i class="name">whoAmI</i>.<i class="method">whatNow()</i>)</i></div>
+   </code>
+  </div>
+  
+  <section><code>
+   <div class="code"><i class="value">~</i><i class="name">$</i> <i class="comment"> nodejs@16.0.1</i></div>
+   <div class="code"><i class="name">i still have hope</i></div>
+   <div class="code"><i class="comment">bash: says your dreaming...</i></div>
+      <div class="code"><i class="name">^C process stopped </i></div>
+   <div class="code"><i class="value">~</i><i class="name">$</i></div>
+</code>
+  </section>
+ </div>
+</section>
+
+<div class="fancy-ab">
+ <span></span>
+ <h2>Contact Us</h2>
+ <span></span>
+</div>
+<!--working contact form(emailjs) section-->
+
+<section class="sec8">
+ 
+ <form action="" method="post" id="cnt-form">
+  <fieldset>
+   <legend>Full Name</legend>
+   <input type="text" placeholder="incredible" name="">
+  </fieldset>
+  
+ <fieldset>
+   <legend>Phone Number</legend>
+   <input type="number" placeholder="optional">
+  </fieldset>
+  
+  <fieldset>
+   <legend>Your E-mail</legend>
+   <input type="email" mame="">
+  </fieldset>
+  
+  <fieldset>
+   <legend>Will be waiting</legend>
+   <textarea placeholder="send us a mail." name=""></textarea>
+  </fieldset>
+  
+  <button type="submit" class="btn">send</button>
+ </form>
+ 
+ <div></div>
+</section>
+
+<footer class="ft">
+ 
+</footer>
+<!--only js goes down-->
+<script src="/src/scripts/main.js" type="module"></script>
+<script src="/src/scripts/animate.js" type="module"></script>
+
+</body>
+</html>
