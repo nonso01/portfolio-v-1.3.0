@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="load">
 
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  
- <title>Welcome to my Portfolio, feel free to browse around, looking at every single content and dropping some reviews</title>
+ <title>Welcome to my Portfolio, feel free and browse through every section, without forgetting to send a mail, your HUMBLE DEV</title>
  
  <link rel="icon" sizes="32x32" href="/assets/my-logos/apple-touch-icon.png" type="image/jpg">
  
@@ -13,9 +13,9 @@
  <link rel="scss" href="/src/styles/main.scss">
   <link rel="stylesheet" href="/src/styles/main.css">
 
- <link rel="stylesheet" href="">
+
 </head>
-<body>
+<body class="load-hide">
  <!--Caution: am not semantic and i make use of sections inappropriately -->
 
 <header class="hd">
@@ -26,22 +26,23 @@
  
  <nav class="hd__nv">
   
-<div>
- <button>Home</button>
-  <button>About</button>
- <button >Contact</button>
- <button>Github</button>
- <button >Linkedin</button>
- <button class="sign">Sign up</button>
+<div class="flex-row hd__btn">
+ <button><a href="#"><i class="fa-solid fa-house fa-2x"></i></a></button>
+  <button><a href="#"><i class="fa-solid fa-user-check fa-2x"></i></a></button>
+ <button><a href="#"><i class="fa-solid fa-headset fa-2x"></i></a></button>
+ <button><a href="#"><i class="fa-brands fa-github fa-2x"></i></a></button>
+ <button><a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a></button>
+ <button><a href="#"><i class="fa-solid fa-user-plus fa-2x"></i></a></button>
+
 </div>
 <!-- mobile will be triggered by JS-->
  </nav>
  
- <div class="hd__intro">
+ <div class="hd__intro flex-col">
   <h1 class="hd__title"></h1>
   <p>You can browse through our various projects and achievements, to see how we interfere and render numerous services.</p>
   
-  <form action="" method="get">
+  <form action="" method="get" class="flex-row">
    <input type="saerch" name="" id="hd-in" placeholder="search..">
    <input type="submit" value="Search now" id="hd-btn" class="btn"disabled>
   </form>
@@ -53,36 +54,36 @@
 
 <section class="sec1">
  
- <div class="sm-div">
+ <div class="sm-div flex-col">
  <h2>Stay productive and Motivated</h2>
   <p class="sm-quote"></p>
   
-  <div class="sm-btn">
+  <div class="sm-btn flex-row">
    <i class="sm-left"></i>
    <i class="sm-right"> </i>
   </div>
  </div>
  
- <div class="sm-card"></div>
+ <div class="sm-card flex-row"></div>
 </section>
 
 <section class="sec2">
  <div class="cl-img"></div>
- <div class="cl_one_op">
+ <div class="cl_one_op flex-col">
   <h1>We Collaborate At Every Level </h1>
   <p>From plannings to startups to full grown enterprises, spreading your local business worldwide.</p>
   
-  <button class="cl-btn btn btn">Explore more</button>
+  <button class="cl-btn btn">Explore more</button>
  </div>
 
- <div class="cl_two_clo">
+ <div class="cl_two_clo flex-col">
   <h1>Coming Soon</h1>
   <p>Sorry there isn't much content to display for now.</p>
   <button class="cl-btn-clo btn">go back</button>
  </div>
 </section>
 
-<div class="ct">
+<div class="ct flex-col">
  <h2>Our Top Categories</h2>
  <p>Our top and major products and services with discounts</p>
 </div>
@@ -90,51 +91,54 @@
 <section class="sec3"> <!--mj-card-->
 </section>
 
-<div class="br">
+<div class="br flex-col">
  <button class="br-btn btn">Browse more</button>
 </div>
 
 <section class="sec4">
- <div class="pj">
+ <div class="pj flex-col">
   <h2>Projects</h2>
  </div>
  
- <div class="pj-sh"></div>
+ <div class="pj-sh flex-col"></div>
 </section>
 
 <!--testimonials will need to be triggered and treated with js and light-up too-->
 <section class="sec5">
   
   <article>
-   <div class="ts-say">
-   <h2>What Do People Say About <span class="me">Martin</span> ?</h2>
+   <div class="ts-say flex-col">
+   <h2>What Do People Say About <span class="me">Martin</span></h2>
    <p>Look at what our <span class="pl"></span> had to say</p>
    </div>
-     <div class="ts-btn"><i class="ts-left"></i><i class="ts-right"></i></div>
+     <div class="ts-btn flex-row"><i class="ts-left"></i><i class="ts-right"></i></div>
   </article>
  
- <div class="ts-pl"></div>
+ <div class="ts-pl flex-row"></div>
 </section>
  <!-- attached to testimonials-->
-<div class="rd-light">
- <div class="light">
- <i></i> <i></i><i></i>
- <i class="light-up"></i><i></i> <i></i>
+<div class="rd-light flex-row">
+ <div class="light flex-row">
+ <i class="light-up"></i>
+ <i></i>
+ <i></i>
+ <i></i>
+ <i></i>
  </div>
 </div>
 
 <!----><section class="sec6">
  <canvas id="cnv"></canvas>
 
-  <div class="lang"></div>
-  <div class="lang-tl">
+  <div class="lang flex-col"></div>
+  <div class="lang-tl flex-col">
    <h3>Our Current Technologies</h3>
    <p>This are the tools we use currently and an insight of our current levels</p>
    <button class="lang-btn btn">view more</button>
   </div>
 </section>
 
-<div class="fancy-ab">
+<div class="fancy flex-row">
  <span></span>
  <h2>About Us</h2>
  <span></span>
@@ -142,14 +146,14 @@
 
 <section class="sec7">
  <div class="myIco"></div>
- <div class="abOne">
+ <div class="abOne flex-row">
   <div></div>
-  <section>
+  <section class="flex-col">
    <p>If you scrolled right down to this section, then thanks for viewing this fancy page of mine. through out this page, I have been talking about <i>Martin</i> as an enterprise and actually am an enterprise of my own so are you!, it will be my pleasure, getting corrections from a senior dev. for more just send a mail  <i>Thanks Again!!</i></p>
   </section>
  </div>
  
- <div class="abTwo">
+ <div class="abTwo flex-col">
   <div class="ab-code">
    <code>
 <!--might cause responsive issues-->
@@ -183,7 +187,7 @@
  </div>
 </section>
 
-<div class="fancy-ab">
+<div class="fancy flex-row">
  <span></span>
  <h2>Contact Us</h2>
  <span></span>
@@ -205,7 +209,7 @@
   
   <fieldset>
    <legend>Your E-mail</legend>
-   <input type="email" mame="">
+   <input type="email" mame="" placeholder="your@gmail.you">
   </fieldset>
   
   <fieldset>
@@ -213,18 +217,37 @@
    <textarea placeholder="send us a mail." name=""></textarea>
   </fieldset>
   
-  <button type="submit" class="btn">send</button>
+  <button type="submit" class="btn" disabled>send</button>
  </form>
  
  <div></div>
 </section>
 
 <footer class="ft">
- 
+ <!-- learn geolocation and add it-->
+<div class="ft-map"></div>
+<div class="ft-info flex-row"></div>
+
+<div class="ft-copy flex-row">
+ <span class="ft-dt"></span>
+
+</div>
+
+<div class="ft-con flex-row">
+ <h2>Let's Connect =></h2>
+ <ul class="flex-row">
+ <li class=""><a href=""><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+ <li class=""><a href=""><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+ <li class=""><a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+ <li class=""><a href=""><i class="fa-brands fa-github fa-2x"></i></a></li>
+ </ul>
+</div>
+
 </footer>
-<!--only js goes down-->
+<!-- only js after this Line-->
 <script src="/src/scripts/main.js" type="module"></script>
 <script src="/src/scripts/animate.js" type="module"></script>
-
+<script src="/src/scripts/resize.js"></script>
+<script src="https://kit.fontawesome.com/5722dffcdf.js" crossorigin="anonymous"></script>
 </body>
 </html>
