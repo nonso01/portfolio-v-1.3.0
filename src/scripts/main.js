@@ -10,7 +10,9 @@ const dc=(x)=>document.createElement(x)
 const dq=(x)=>document.querySelector(x)
 const di=(x)=> document.getElementById(x)
 const dqA=(x)=> document.querySelectorAll(x)
+//let frag = document.createDocumentFragment()
 
+const html=dq("html")
 const body= dq('body')
 
 function creatElem(chd,cls,prt,text=null){
@@ -20,12 +22,14 @@ function creatElem(chd,cls,prt,text=null){
  el.textContent= text
 }
 
-function commonTimer(f,time){
-const timer= setInterval(f,time)
+function interval(f,time){
+const interval= setInterval(f,time)
 }
 
+function timeOut(f,time){
+ const timeOut= setTimeout(f,time)
+}
 
-//csl(allData)
 
 // 1-time todo will add blink effects
 let tictac=0
@@ -33,12 +37,13 @@ let tictac=0
 function timing(){
  const date= new Date()
  
- const [hour,min,sec,blink,milli]=[dq('.hr'),dq('.mn'),dq('.sec'),dqA('.dim'),dq('.mm')]
+ const [hour,min,sec,blink,milli,ftDay]=[dq('.hr'),dq('.mn'),dq('.sec'),dqA('.dim'),dq('.mm'),dq(".ft-dt")]
  
  hour.textContent=date.getHours()
  min.textContent=date.getMinutes()
  sec.textContent=date.getSeconds()
  milli.textContent=date.getMilliseconds()
+ ftDay.textContent=date.toDateString()
 }
 
 // 2-intro text
@@ -47,11 +52,10 @@ function intro(){
  const short= allData.introText
  introduce.textContent=short[0]
  
- let timer= setInterval(()=>{
+ interval(()=>{
   let random= Math.floor(Math.random()*short.length)
  introduce.textContent=short[random]
  },2500)
- 
 }
 
 // 3-quotes
@@ -85,7 +89,7 @@ function smallCard(){
  const cardDiv= dq('.sm-card')
  
  let smallCardDisplay= allData.smallCardData.map((data)=>{
-  return (`<div class="sm-cd"><img src=${data.img} alt="img" width="40px" height="40px"><h3>${data.h3}</h3><p>${data.p}.</p></div>`)
+  return (`<div class="sm-cd flex-col"><img src=${data.img} alt="img" width="40px" height="40px"><h3>${data.h3}</h3><p>${data.p}.</p></div>`)
  }).join("")
  cardDiv.innerHTML= smallCardDisplay
 }
@@ -111,11 +115,11 @@ function allModal(){
 function mainCard(){
  const section= dq(".sec3")
  const short= allData.majorCardData_1
- let src= "/assets/icons/check_circle_black_24dp.svg"
+ let src= "src=\'/assets/icons/star.png' width='24px' height=24px class='star\'"
  
  
  short.forEach((data)=>{
-  data.star=(`<img src=${src}><img src=${src}><img src=${src}><img src=${src}><img src=${src}>`)
+  data.star=(`<img ${src}><img ${src}><img ${src}><img ${src}><img ${src}>`)
   data.fee= "project fee"
  })
  let cardDisplay= short.map((data)=>{
@@ -131,13 +135,16 @@ function changeMainCard(){
 
 }
  
+ //6-1 update main cards todo
+ function updateCard(){ }
+ 
  //7 -projects
  function project(){
   const [btn,pj_show]=[dq(".pj-btn"),dq(".pj-sh")]
   const short= allData.projectData
   
   let projectDisplay= short.map((data)=>{
-   return (`<div><section><img src=${data.img}></section><article><h3>${data.h3}</h3><p><a href=${data.link}>${data.p}</a></p></arricle></div>`)
+   return (`<div class="flex-row"><section><img src=${data.img}></section><article class="flex-col"><h3>${data.h3}</h3><p><a href=${data.link}>${data.p}</a></p></arricle></div>`)
   }).join("")
   
   pj_show.innerHTML= projectDisplay
@@ -147,40 +154,139 @@ function changeMainCard(){
 
 //8 -testimonial
 function people(){
- const [People,leftBtn,rightBtn,T]=[dq(".pl"),dq(".ts-left"),dq(".ts-right"),dq(".ts-pl")]
+ 
+  (function() {
+   const say = dq(".pl")
+   const data=["Friends","Companions","Families","Sponsors","Co-workers"]
+   say.textContent=data[0]
+   
+   interval(()=>{
+    let random= Math.floor(Math.random()*data.length)
+   say.textContent=data[random]
+   },2000)
+})()
+  
+ const [People,T]=[dq(".pl"),dq(".ts-pl")]
  const short= allData.testimonialData
  
- let peopleDidplay= short.map((data)=>{
-  return (`<div class="ts-card"><article><img src=${data.img} width="60p" height="60px"><div><h4>${data.name}</h4><span>${data.job}</span></div></article><p>${data.word}</p></div>`)
+ let peopleDisplay= short.map((data)=>{
+  return (`<div class="ts-card flex-col ${data.cls}"><article><img src=${data.img} width="60px" height="60px"><div><h4>${data.name}</h4><span>${data.job}</span></div></article><p>${data.word}</p></div>`)
  }).join("")
- T.innerHTML=peopleDidplay
+ T.innerHTML=peopleDisplay
+ 
 }
 
+//8-1 update testimonial todo
+function updatePeople(){
+ const T= dq(".ts-pl")
+ const light= dqA(".light i")
+ const child=T.children
+ let bulbNum= (light.length-1)
+ let store=[]
+ let num=0
+ //csl(child)
+  for(let el of child) store.push(el)
+
+ 
+ const leftBtn=dq(".ts-left").addEventListener("click",()=>{
+  num--
+  light.forEach((el,i)=>{
+   if(el.classList.contains("light-up")) el.classList.remove("light-up")
+   if(num===i) el.classList.add("light-up")
+   if(num<0) num=bulbNum
+   
+  })
+     store.forEach((itm,idx)=>{
+ num===idx?itm.classList.add("ts-card-up"):itm.classList.remove("ts-card-up")
+ if (num===2 || num>=3) {
+  child[0].style.display = "none"
+  child[1].style.display = "none"
+  child[3].classList.remove("hide")
+  child[4].classList.remove("hide")
+ } else{
+  child[0].style.display = "flex"
+  child[1].style.display = "flex"
+  child[3].classList.add("hide")
+  child[4].classList.add("hide")
+ }
+   })
+
+ })
+ 
+ const rightBtn=dq(".ts-right").addEventListener("click",()=>{
+  num++
+  light.forEach((el,i)=>{
+   if(el.classList.contains("light-up")) el.classList.remove("light-up")
+   if(num===i) el.classList.add("light-up")
+   if(num>bulbNum){ 
+    num=0
+    num==i?el.classList.add("light-up"):0
+   }
+  })
+       store.forEach((itm,idx)=>{
+   if(num===idx) itm.classList.add("ts-card-up")
+   else itm.classList.remove("ts-card-up")
+   
+    if(num===2 || num>=3){
+  child[0].style.display="none"
+  child[1].style.display="none"
+  child[3].classList.remove("hide")
+  child[4].classList.remove("hide")
+    } else{
+     child[0].style.display = "flex"
+     child[1].style.display = "flex"
+     child[3].classList.add("hide")
+     child[4].classList.add("hide")
+    }
+   })
+
+ })
+ 
+}
 //9 -languages
 function lang(){
  const div= dq(".lang")
  const short= allData.languageData
  
  let langDisplay= short.map(data=>{
-  return (`<div class="lang-card"><div><i>${data.percent}</i><span class="lang-rate"><i class=${data.cls}></i></span></div><img src=${data.img} width="70px" height="70px"></div>`)
+  return (`<div class="lang-card flex-row"><div class="flex-col"><i>${data.percent}</i><span class="lang-rate"><i class=${data.cls}></i></span></div><img src=${data.img} width="70px" height="70px"></div>`)
  }).join("")
  div.innerHTML=langDisplay
+}
+
+//10 -footerInfos
+function footItem(){
+ const ftInfo= dq(".ft-info")
+ const ftConnect= dq(".ft-con")
+ const short= allData.footerData_1
+ 
+ let footerItemDisplay= short.map(data=>{
+  return (`<section class="flex-col"><h3>${data.title}</h3><ul class="flex-col"><li>${data._1}</li><li>${data._2}</li><li>${data._3}</li><li>${data._4}</li></ul></section>`)
+ }).join("")
+ ftInfo.innerHTML=footerItemDisplay
+ 
 }
 
 
 //once fully loaded
 window.addEventListener("load",()=>{
-  commonTimer(timing, 100)
+  interval(timing, 100)
   intro()
   quote()
   smallCard()
   allModal()
-  mainCard()
+  mainCard() 
   project()
   people()
   lang()
-
+  footItem()
+  updateCard
+  updatePeople()
+  /*testing*/
+ timeOut(()=>{
+  html.classList.remove("load")
+  body.classList.remove("load-hide")
+ },6000)
 })
 
-body.style.transform="scale(0.5)"
-
+//body.style.transform="scale(0.4)"

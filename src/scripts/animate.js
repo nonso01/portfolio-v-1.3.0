@@ -16,7 +16,7 @@ function creatElem(chd,cls,prt,text=null){
  prt.appendChild(el)
  el.textContent= text
 }
-function commonTimer(f,time){
+function interval(f,time){
  let timer= setInterval(f,time)
 }
 
@@ -35,8 +35,8 @@ function myCanvas(){
   constructor(){
    this.x= Math.random()*canvasWidth
    this.y= Math.random()*canvasHeight
-   this.width= 15
-   this.height= 15
+   this.width= 10
+   this.height= 10
    this.speed= Math.random()*4-2
   }
   update(){
@@ -76,4 +76,18 @@ for(let i=0; i<numOfRect;i++){
 
 window.addEventListener("load",()=>{
  myCanvas()
+ 
+ 
+ 
+ let h= dq(".js")
+let a={
+ targets: h,
+ width: ["20%","40%","60%","80%"],
+ loop: true,
+ easing: "linear"
+ 
+}
+anime(a) 
+
+ 
 })

@@ -1,7 +1,6 @@
 "use strict"
 
-
-const allData= {
+ const  allData= {
  introText: [
   "Turn your dreams into an achievement while building with Us.",
   "Collaborating with us means scaling your business to greater heights.",
@@ -85,17 +84,17 @@ const allData= {
     ,{
      img: "/assets/images/dAgency.png",
      h3:"D-agency",
-     p: "A fun project where i used EcmaScript for the first time",
+     p: "A fun project with some JavaScript",
      link: "https://nonso01js.netlify.app/"
     }
     ,{
-     img: "/assets/icons/wallet-dynamic-premium.png",
+     img: "/assets/icons/default.png",
       h3: "Order summary",
       p: "My third frontendmentor challenge",
       link: "https://github.com/nonso01/"
     },
     {
-     img: "/assets/my-logos/apple-touch-icon.png",
+     img: "/assets/icons/default.png",
      h3: "Nft Card",
      p: "One of my first works during my frontend journey",
      Link: "https://github.com/nonso01/"
@@ -106,20 +105,37 @@ const allData= {
     img: "/assets/icons/xxxx_1.png",
     name: "Evelyn",
     job:"Entrepreneur",
-    word:"Martin is much more than an enterprise to me! it's like a son and a child well trained."
+    word:"Martin is much more than an enterprise to me! it\'s like a son who is ready to deliver services at the speed of sound.",
+    cls:""
    },
    {
     img: "/assets/icons/xxxx_4.jpg",
     name: "Shimul",
     job:"Web developer",
-    word:"I learned about Martin not too long ago, probably a year, and am glad working and collaborating with them."
+    word:"I learned about Martin not too long ago, probably a year, and am glad working and collaborating with them.",
+        cls:""
    },
    {
    img: "/assets/icons/xxxx_5.jpeg",
     name: "Precious",
     job: "Medical doctor",
-    word: "Well as a medical personnel I have been working very closely with Martin, and all i can say is there are trust worthy." 
-   }],
+    word: "Well as a medical personnel I have been working very closely with Martin, and all i can say is there are trust worthy." ,
+        cls:""
+   },
+     {
+   img: "/assets/icons/xxxx_6.png",
+    name: "AKA",
+    job: "Senior Engineer",
+    word: "I and Martin have been partners for years, I have built a solid relationship with them, because of their admirable and outstanding services..",
+        cls:"hide"
+  },
+  {
+   img: "/assets/icons/default.png",
+    name: "Donatus",
+    job: "CEO at Donas",
+    word:"You might check out one of their products which was renderd to me some few weeks ago, there are just the Best.",
+        cls:"hide"
+  }],
  languageData:[
   {
   img: "/assets/icons/html-5-logo-svgrepo-com.svg",
@@ -140,7 +156,29 @@ const allData= {
    img: "/assets/icons/bash.png",
     cls: "bash",
     percent: "19.77%"
-  }]
+  }],
+ footerData_1:[
+  {
+   title: "Products",
+   _1: "Features",
+   _2:"Security",
+   _3:"Pricing",
+   _4: "customer story",
+  },
+  {
+   title: "Teams",
+   _1: "IT",
+   _2:"Engineering",
+   _3:"Media",
+   _4: "Human resources",
+  },
+  {
+   title: "Company",
+    _1: "About Us",
+    _2: "News",
+    _3: "Leadership",
+    _4: 'Others',
+  }],
 }
 
 export default allData
