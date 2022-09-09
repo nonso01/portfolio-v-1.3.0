@@ -868,13 +868,13 @@ html body {
   font-family: cursive;
 }
 
-/* testing
+/* testing*/
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
 .load-hide{
  display: none;
-}*/
+}
 
 /*# sourceMappingURL=main.css.map */
