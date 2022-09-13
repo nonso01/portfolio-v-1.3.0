@@ -27,6 +27,13 @@ const bodyWidth=window.innerWidth
 
 let mbWidth,tbWidth,dkWidth
 
+// temporal
+ if(bodyWidth<900){
+  body.style.display="none"
+  html.innerText=`please switch to desktop mode... screen size is ${bodyWidth + "px"} the page is not yet responsive...`
+ } 
+
 window.addEventListener("load",()=>{
+
  
 })
