@@ -13,7 +13,7 @@
   font-family: "openSans";
   src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
-*, *:before, *:after {
+* {
   box-sizing: border-box;
   font-family: var(--opn-sn);
   font-style: normal;
@@ -80,12 +80,12 @@
 }
 
 [class|=fa] {
-  display: inline-block;
   height: auto;
   width: auto;
   color: var(--tx_4);
   opacity: 0.9;
   transition: var(--trans);
+  vertical-align: middle;
 }
 [class|=fa]:hover {
   color: var(--tx_3);
@@ -884,13 +884,13 @@ html body {
   font-family: var(--tech);
 }
 
-/* testing
-
-.load{
- background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
+/* testing*/
+.load {
+  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
-.load-hide{
- display: none;
-}*/
+
+.load-hide {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map */

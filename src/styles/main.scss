@@ -1,6 +1,6 @@
             /*---------Happy Coding don't delete everything this time  :-(--------------*/
             
-//col
+
 $col_bg_1: rgba(40,40,40,1); 
 $col_bg_2: rgba(25,25,25,1);
 $col_tx_1: cornsilk;
@@ -8,7 +8,7 @@ $col_tx_2: #ddd;
 $col_tx_3: #17FF9F; //grn
 $col_tx_4: #FFAD31; //org
 
-// vars
+
 $w_mx: 1440px;
 $w_st: 100%;
 $H: 100vh;
@@ -71,7 +71,7 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
 }
 //normalize
 
-*,*:before,*:after {
+*{
  box-sizing: border-box;
  font-family: var(--opn-sn);
  font-style: normal;
@@ -119,12 +119,13 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
  @include flex-df(column wrap,space-evenly ,var(--cn) );
 }
 [class|="fa"]{
- display: inline-block;
+// display: inline-block;
  height: auto;
  width: auto;
  color: var(--tx_4);
  opacity: 0.9;
  transition: var(--trans);
+ vertical-align: middle;
  &:hover{
   color: var(--tx_3);
   opacity: 0.8;
@@ -885,12 +886,12 @@ overflow: visible;
   font-family: var(--tech);
  }
 }
-/* testing
+/* testing*/
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
 .load-hide{
  display: none;
-}*/
+}
 //*{ border: $bd;}
