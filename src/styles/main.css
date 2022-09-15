@@ -13,7 +13,7 @@
   font-family: "openSans";
   src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
-* {
+*, *:before, *:after {
   box-sizing: border-box;
   font-family: var(--opn-sn);
   font-style: normal;
@@ -80,6 +80,9 @@
 }
 
 [class|=fa] {
+  display: inline-block;
+  height: auto;
+  width: auto;
   color: var(--tx_4);
   opacity: 0.9;
   transition: var(--trans);
@@ -98,8 +101,12 @@
   transition: var(--trans);
 }
 .ts-card-up img {
-  outline: 2px solid var(--tx_4) !important;
+  outline: 2px solid var(--tx_3) !important;
   border: 2px solid var(--ts) !important;
+  transition: var(--trans);
+}
+.ts-card-up h4 {
+  color: var(--tx_3) !important;
   transition: var(--trans);
 }
 
@@ -128,7 +135,7 @@ input, textarea {
 
 /* desktop first approach, will be refactoring from time to time*/
 html {
-  width: var(--st-w);
+  width: var(--mx-w);
   min-height: var(--mx-h);
   font-size: var(--fts);
   background-color: var(--bg_1);
@@ -165,7 +172,10 @@ html body {
   text-align: var(--cn);
 }
 .hd__tm div .dim {
-  opacity: 0.7;
+  color: var(--bg_2);
+}
+.hd__tm div .blink {
+  color: var(--tx_3) !important;
 }
 .hd__tm div i, .hd__tm div span {
   font-family: var(--tech);
@@ -187,7 +197,7 @@ html body {
   border: 1px solid var(--ts);
   text-align: var(--cn);
 }
-.hd__nv button a, .hd__nv button i {
+.hd__nv button a {
   display: inline-block;
   width: auto;
   height: auto;
@@ -299,7 +309,7 @@ html body {
 }
 
 .cl-img {
-  background: var(--ts) url("/assets/images/trends-in-2021_1.jpeg") no-repeat border-box center/cover;
+  background: var(--ts) url("/assets/images/trends-in-2021_1.jpeg") no-repeat padding-box center/cover;
   border: 2px solid var(--ts);
   border-radius: var(--rad);
 }
@@ -702,6 +712,9 @@ html body {
   border-radius: var(--rad);
   padding: 1%;
 }
+.abTwo div:not(.code) code, .abTwo section code {
+  font-size: calc(var(--rad) * 0.2vw);
+}
 .abTwo div:not(.code) {
   height: 60%;
 }
@@ -712,33 +725,24 @@ html body {
   height: 35%;
   color: var(--tx_2);
 }
-
-.code {
+.abTwo .code {
   color: var(--tx_2);
 }
-.code i {
+.abTwo .code i {
   font-family: var(--mono);
 }
-.code .name {
+.abTwo .code .blink {
+  width: min-content;
+  color: var(--bg_1);
+}
+.abTwo .code .name {
   color: var(--tx_2);
 }
-.code .var {
-  color: #E25657;
-}
-.code .num {
-  color: #B21193;
-}
-.code .value {
+.abTwo .code .value {
   color: #19C977;
+  font-family: var(--mono);
 }
-.code .method {
-  color: #7AA2FF;
-}
-.code .bool, .code .check {
-  color: var(--tx_4);
-}
-
-.comment {
+.abTwo .code .comment {
   color: #757575 !important;
   font-family: "Courier New", Courier;
 }
@@ -843,14 +847,14 @@ html body {
   grid-column: 4/10;
 }
 .ft-con h2 {
-  font-family: cursive;
+  font-family: var(--tech);
   font-size: 2.75vw;
 }
 .ft-con ul {
   width: 70%;
   height: 90%;
 }
-.ft-con a, .ft-con i {
+.ft-con a {
   display: inline-block;
   width: auto;
   height: auto;
@@ -876,17 +880,17 @@ html body {
 }
 .ft-dt {
   height: calc(var(--st-w) - 10%);
-  font-size: 1.7rem;
-  font-family: cursive;
+  font-size: 2.75vw;
+  font-family: var(--tech);
 }
 
-/* testing*/
+/* testing
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
 .load-hide{
  display: none;
-}
+}*/
 
 /*# sourceMappingURL=main.css.map */

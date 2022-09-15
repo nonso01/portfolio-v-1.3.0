@@ -1,0 +1,42 @@
+@import url("/src/styles/main.css");
+:root {
+  --im: !important;
+}
+
+.trans {
+  transition: var(--trans);
+}
+.trans:hover, .trans:before, .trans:after {
+  transition: var(--trans);
+}
+
+.sm-cd:hover {
+  transform: translateY(-5%) scale(1.09);
+  border-bottom: 4px solid var(--tx_4);
+}
+.sm-cd:hover ~ div {
+  opacity: 0.7;
+  transform: scale(0.99);
+}
+
+.cl-img.trans:hover {
+  position: relative;
+  transform: translateX(-2%);
+}
+.cl-img.trans:hover:before {
+  display: block;
+  position: absolute;
+  content: "Explore more";
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+  background-color: rgba(40, 40, 40, 0.8);
+  font-size: min(100%, 1.5rem);
+  color: var(--tx_4);
+  border: 2px solid var(--tx_4);
+  border-radius: inherit;
+}
+
+/* hover effects and major transforms*/
+
+/*# sourceMappingURL=animate.css.map */
