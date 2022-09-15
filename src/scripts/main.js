@@ -1,7 +1,7 @@
 "use strict"
 
 import anime from '/src/animejs/index.js'
-import allData from '/src/scripts/data.js'
+import {allData} from '/src/scripts/data.js'
 
 /* To every line writing there's a better alternative --Martin-- */
 
@@ -32,10 +32,11 @@ function timeOut(f,time){
 
 
 // 1-time todo will add blink effects
-let tictac=0
 
+let tictac= 0
 function timing(){
  const date= new Date()
+ tictac++
  
  const [hour,min,sec,blink,milli,ftDay]=[dq('.hr'),dq('.mn'),dq('.sec'),dqA('.dim'),dq('.mm'),dq(".ft-dt")]
  
@@ -44,6 +45,10 @@ function timing(){
  sec.textContent=date.getSeconds()
  milli.textContent=date.getMilliseconds()
  ftDay.textContent=date.toDateString()
+ 
+ blink.forEach((el)=>{
+  tictac%2==0?el.classList.add("blink"):el.classList.remove("blink")
+ })
 }
 
 // 2-intro text
@@ -89,7 +94,7 @@ function smallCard(){
  const cardDiv= dq('.sm-card')
  
  let smallCardDisplay= allData.smallCardData.map((data)=>{
-  return (`<div class="sm-cd flex-col"><img src=${data.img} alt="img" width="40px" height="40px"><h3>${data.h3}</h3><p>${data.p}.</p></div>`)
+  return (`<div class="sm-cd flex-col trans"><img src=${data.img} alt="img" width="40px" height="40px"><h3>${data.h3}</h3><p>${data.p}.</p></div>`)
  }).join("")
  cardDiv.innerHTML= smallCardDisplay
 }
@@ -184,10 +189,9 @@ function updatePeople(){
  let bulbNum= (light.length-1)
  let store=[]
  let num=0
- //csl(child)
+ 
   for(let el of child) store.push(el)
 
- 
  const leftBtn=dq(".ts-left").addEventListener("click",()=>{
   num--
   light.forEach((el,i)=>{
@@ -254,7 +258,24 @@ function lang(){
  div.innerHTML=langDisplay
 }
 
-//10 -footerInfos
+//10 ab-code
+function codeWrite(){
+ let code=dq(".ab-code .value")
+ let blink= dq(".ab-code .blink")
+ const short= allData.aboutmeData
+ let text= short.pop()
+ let speed= 170
+ let i =0
+ 
+ interval(()=>{
+  code.textContent+= text.charAt(i)
+  i++
+  
+   i%2==0?blink.classList.remove("blink"):blink.classList.add("blink")
+ },speed)
+ 
+}
+//11 -footerInfos
 function footItem(){
  const ftInfo= dq(".ft-info")
  const ftConnect= dq(".ft-con")
@@ -270,7 +291,7 @@ function footItem(){
 
 //once fully loaded
 window.addEventListener("load",()=>{
-  interval(timing, 100)
+  interval(timing, 900)
   intro()
   quote()
   smallCard()
@@ -279,6 +300,7 @@ window.addEventListener("load",()=>{
   project()
   people()
   lang()
+  codeWrite()
   footItem()
   updateCard
   updatePeople()
@@ -290,3 +312,4 @@ window.addEventListener("load",()=>{
 })
 
 //body.style.transform="scale(0.4)"
+
