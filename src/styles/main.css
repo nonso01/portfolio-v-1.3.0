@@ -135,7 +135,7 @@ input, textarea {
 
 /* desktop first approach, will be refactoring from time to time*/
 html {
-  width: var(--mx-w);
+  width: var(--st-w);
   min-height: var(--mx-h);
   font-size: var(--fts);
   background-color: var(--bg_1);
