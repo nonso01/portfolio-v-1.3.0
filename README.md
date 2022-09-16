@@ -6,20 +6,28 @@
 - update everything once nearly ready
 - `sass --watch file this-file` to keep track of every changes
 
-#! refactoring my styles 06/09/22
 
-#! Trying to figure out how to update information `onclick` or with an `Event`
-
-```html
-<script>
+```js
  //one liner
     el.classList.contains("light-up")?el.classList.remove("light-up"):num==i?el.classList.add("light-up"):num>bulbNum? num=-1:0
-    /* 
-    - having some minor issues with the associated right-btn
-    -issue solved
-    */
 
-</script>
 ```
 #! 07/09/22
 - was able to do something in the testimonials really happy 😌😌
+
+#! refactoring my styles 16/09/22
+```js
+// looking at some docs on how to implement google maps
+// or using the navigator API
+
+const location= navigator
+and can be used to track devices as well
+```
+
+```css
+/* making use of filter properties on a modal*/
+.modal{
+ /*this and that*/
+}
+```
+#! Work in `progress`
