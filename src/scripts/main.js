@@ -1,4 +1,4 @@
-"use strict"
+ "use strict"
 
 import anime from '/src/animejs/index.js'
 import {allData} from '/src/scripts/data.js'
@@ -31,27 +31,25 @@ function timeOut(f,time){
 }
 
 
-// 1-time todo will add blink effects
-
-let tictac= 0
 function timing(){
  const date= new Date()
- tictac++
+
  
  const [hour,min,sec,blink,milli,ftDay]=[dq('.hr'),dq('.mn'),dq('.sec'),dqA('.dim'),dq('.mm'),dq(".ft-dt")]
  
  hour.textContent=date.getHours()
  min.textContent=date.getMinutes()
  sec.textContent=date.getSeconds()
- milli.textContent=date.getMilliseconds()
+ interval(()=>{
+   milli.textContent=date.getMilliseconds()
+ },400)
  ftDay.textContent=date.toDateString()
  
  blink.forEach((el)=>{
-  tictac%2==0?el.classList.add("blink"):el.classList.remove("blink")
+  sec.innerText%2==0?el.classList.add("blink"):el.classList.remove("blink")
  })
 }
 
-// 2-intro text
 function intro(){
  const introduce= dq('.hd__title')
  const short= allData.introText
@@ -63,7 +61,6 @@ function intro(){
  },2500)
 }
 
-// 3-quotes
 function quote(){
   let index= 5
   const short= allData.quoteText
@@ -89,7 +86,6 @@ shuffle.textContent=short[index]
  shuffle.textContent=short[index]
 }
 
-// 4-small cards
 function smallCard(){
  const cardDiv= dq('.sm-card')
  
@@ -99,28 +95,42 @@ function smallCard(){
  cardDiv.innerHTML= smallCardDisplay
 }
 
-// 5 -all modal
 function allModal(){
  
  (function(){ // 1 modal
- const first= dq(".cl_one_op")
-  const second= dq(".cl_two_clo")
+ const clOn= dq(".cl_one_op")
+  const clOff= dq(".cl_two_clo")
+  const M= dq(".M")
 
   const firstBtn= dq(".cl-btn").addEventListener("click",()=>{
-  first.style.display="none"
-  second.style.display="flex"
+  clOn.style.display="none"
+  clOff.style.display="flex"
   })
   const secondBtn=dq(".cl-btn-clo").addEventListener("click",()=>{
-  first.style.display="flex"
-   second.style.display="none"
-  })})()
+  clOn.style.display="flex"
+   clOff.style.display="none"
+  })
+  
+  M.classList.contains("modal")?M.classList.remove("modal"):0
+  
+  const brBtn= dq(".br button").addEventListener("click",()=>{
+   M.classList.add("modal")
+   M.classList.remove("hide")
+  })
+  const MOff= dq(".M i").addEventListener("click",()=>{
+     M.classList.add("hide")
+     M.classList.remove("modal")
+    })
+ 
+ })()
+  
+ 
 }
 
-//6 -main cards
 function mainCard(){
  const section= dq(".sec3")
  const short= allData.majorCardData_1
- let src= "src=\'/assets/icons/star.png' width='24px' height=24px class='star\'"
+ let src= "src='/assets/icons/star.png' width='15px' height=15px class='star'"
  
  
  short.forEach((data)=>{
@@ -128,23 +138,14 @@ function mainCard(){
   data.fee= "project fee"
  })
  let cardDisplay= short.map((data)=>{
-  return (`<div class="mn-card"><div class="card-img"><img src=${data.img} alt="x"></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
+  return (`<div class="mn-card trans"><div class="card-img"><img src=${data.img} alt="x"></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
  }).join("")
  section.innerHTML= cardDisplay;
- /*todo update the cards
-function changeMainCard(){
- const btn= dq(".br-btn").addEventListener("click",()=>{
-  p=allData.majorCardData_2()
-  csl(short)
- })*/
-
 }
  
- //6-1 update main cards todo
- function updateCard(){ }
+function updateCard(){ }
  
- //7 -projects
- function project(){
+function project(){
   const [btn,pj_show]=[dq(".pj-btn"),dq(".pj-sh")]
   const short= allData.projectData
   
@@ -157,7 +158,6 @@ function changeMainCard(){
   //todo update projects 
  }
 
-//8 -testimonial
 function people(){
  
   (function() {
@@ -181,7 +181,6 @@ function people(){
  
 }
 
-//8-1 update testimonial todo
 function updatePeople(){
  const T= dq(".ts-pl")
  const light= dqA(".light i")
@@ -247,7 +246,7 @@ function updatePeople(){
  })
  
 }
-//9 -languages
+
 function lang(){
  const div= dq(".lang")
  const short= allData.languageData
@@ -258,7 +257,6 @@ function lang(){
  div.innerHTML=langDisplay
 }
 
-//10 ab-code
 function codeWrite(){
  let code=dq(".ab-code .value")
  let blink= dq(".ab-code .blink")
@@ -275,7 +273,7 @@ function codeWrite(){
  },speed)
  
 }
-//11 -footerInfos
+
 function footItem(){
  const ftInfo= dq(".ft-info")
  const ftConnect= dq(".ft-con")
@@ -312,4 +310,7 @@ window.addEventListener("load",()=>{
 })
 
 //body.style.transform="scale(0.4)"
+
+let test= dq("head style")
+//test.innerHTML= ".hd{background: red !important}"
 

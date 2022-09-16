@@ -1,4 +1,4 @@
-"use strict"
+ "use strict"
 import anime from '/src/animejs/index.js'
 
 
@@ -10,17 +10,10 @@ const dqA=(x)=> document.querySelectorAll(x)
 
 const body= dq('body')
 
-function creatElem(chd,cls,prt,text=null){
- let el= dc(chd)
- el.classList.add(cls)
- prt.appendChild(el)
- el.textContent= text
-}
 function interval(f,time){
  let timer= setInterval(f,time)
 }
 
-//1 -canvas with soft rect around it
 function myCanvas(){
  const canvas= di("cnv")
  const ctx= canvas.getContext("2d")
@@ -59,7 +52,6 @@ function myCanvas(){
 for(let i=0; i<numOfRect;i++){
  rectArray.push(new Rect())
 }
-//csl(ctx)
  function animate(){
   ctx.clearRect(0,0,canvasWidth,canvasHeight)
   
@@ -70,7 +62,6 @@ for(let i=0; i<numOfRect;i++){
   requestAnimationFrame(animate)
  }
  animate()
- //commonTimer(animate,3000)
 }
 
 
@@ -78,16 +69,20 @@ window.addEventListener("load",()=>{
  myCanvas()
  
  
- 
- let h= dq(".js")
+ let h= dq(".css")
 let a={
  targets: h,
  width: ["20%","40%","60%","80%"],
+ duration: 5000,
  loop: true,
  easing: "linear"
  
 }
 anime(a) 
+})
 
+//let test=ft.getBoundingClientRect()
+window.addEventListener("scroll",()=>{
  
+ //csl(window.pageYOffset)
 })
