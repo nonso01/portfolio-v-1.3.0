@@ -21,7 +21,7 @@
 // or using the navigator API
 
 const location= navigator
-and can be used to track devices as well
+//and can be used to track devices as well
 ```
 
 ```css
