@@ -12,16 +12,28 @@
 
  <link rel="scss" href="/src/styles/main.scss">
   <link rel="stylesheet" href="/src/styles/main.css">
-
-
+<style id="css"></style>
 </head>
 <body class="load-hide">
+ 
  <!--Caution: am not semantic and i make use of sections inappropriately -->
+
+<div class="M flex-col hide">
+ <div class="flex-row">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+ </div>
+ <i class="fa-solid fa-xmark">
+  <!--<img src="/assets/icons/cross-small.svg" alt="" />-->
+ </i>
+ <p>Sorry we are currently working on this section, kindly bear with us.</p>
+</div>
 
 <header class="hd">
  
  <div class="hd__tm">
-  <div><i class="hr"></i> <span class="dim">:</span> <i class="mn"></i> <span class="dim">:</span> <i class="sec"></i> <i class="mm"></i></div>
+  <div class="trans"><i class="hr"></i> <span class="dim">:</span> <i class="mn"></i> <span class="dim">:</span> <i class="sec"></i> <i class="mm"></i></div>
  </div>
  
  <nav class="hd__nv">
@@ -44,7 +56,7 @@
   
   <form action="" method="get" class="flex-row">
    <input type="saerch" name="" id="hd-in" placeholder="search..">
-   <input type="submit" value="Search now" id="hd-btn" class="btn"disabled>
+   <input type="submit" value="Search now"  class="btn hd-btn"disabled>
   </form>
  </div>
  
@@ -75,7 +87,7 @@
   
   <button class="cl-btn btn">Explore more</button>
  </div>
-
+ 
  <div class="cl_two_clo flex-col">
   <h1>Coming Soon</h1>
   <p>Sorry there isn't much content to display for now.</p>
@@ -103,7 +115,6 @@
  <div class="pj-sh flex-col"></div>
 </section>
 
-<!--testimonials will need to be triggered and treated with js and light-up too-->
 <section class="sec5">
   
   <article>
@@ -228,10 +239,13 @@
  <li class=""><a href=""><i class="fa-brands fa-twitter fa-2x"></i></a></li>
  <li class=""><a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
  <li class=""><a href=""><i class="fa-brands fa-github fa-2x"></i></a></li>
+  <li class=""><a href=""><i class="fa-brands fa-whatsapp fa-2x"></i></a></li>
+
  </ul>
 </div>
 
 </footer>
+
 <!-- only js after this Line-->
 <script src="/src/scripts/main.js" type="module"></script>
 <script src="/src/scripts/animate.js" type="module"></script>
