@@ -171,7 +171,7 @@ input,textarea{
 
 /* desktop first approach, will be refactoring from time to time*/
 html{
-  width: var(--mx-w);
+  width: var(--st-w);
  min-height: var(--mx-h);
  font-size: var(--fts);
  background-color: var(--bg_1);
@@ -835,6 +835,8 @@ overflow: visible;
   border-radius: inherit;
   background-color: var(--tx_2);
   border: 2px solid var(--bg_1);
+  width: var(--st-w);
+  height: var(--st-w);
  }
  
 &-info{
@@ -852,6 +854,8 @@ overflow: visible;
  h2{
   font-family: var(--tech);
   font-size: calc(2.5vw * 1.1);
+  height: min-content;
+  align-self: var(--cn);
  }
  ul{
   width: 60%;

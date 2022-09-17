@@ -837,6 +837,8 @@ html body {
   border-radius: inherit;
   background-color: var(--tx_2);
   border: 2px solid var(--bg_1);
+  width: var(--st-w);
+  height: var(--st-w);
 }
 .ft-info {
   grid-row: 2/5;
@@ -853,6 +855,8 @@ html body {
 .ft-con h2 {
   font-family: var(--tech);
   font-size: 2.75vw;
+  height: min-content;
+  align-self: var(--cn);
 }
 .ft-con ul {
   width: 60%;
@@ -888,13 +892,13 @@ html body {
   font-family: var(--tech);
 }
 
-/* testing*/
+/* testing
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
 .load-hide{
  display: none;
-}
+}*/
 
 /*# sourceMappingURL=main.css.map */
