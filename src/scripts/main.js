@@ -10,7 +10,6 @@ const dc=(x)=>document.createElement(x)
 const dq=(x)=>document.querySelector(x)
 const di=(x)=> document.getElementById(x)
 const dqA=(x)=> document.querySelectorAll(x)
-//let frag = document.createDocumentFragment()
 
 const html=dq("html")
 const body= dq('body')
@@ -30,11 +29,13 @@ function timeOut(f,time){
  const timeOut= setTimeout(f,time)
 }
 
+function event(e,t,f){
+ const event= e.addEventListener(t,f)
+}
 
 function timing(){
  const date= new Date()
 
- 
  const [hour,min,sec,blink,milli,ftDay]=[dq('.hr'),dq('.mn'),dq('.sec'),dqA('.dim'),dq('.mm'),dq(".ft-dt")]
  
  hour.textContent=date.getHours()
@@ -62,22 +63,21 @@ function intro(){
 }
 
 function quote(){
-  let index= 5
   const short= allData.quoteText
-
- const shuffle= dq('.sm-quote')
+  const shuffle= dq('.sm-quote')
+  let index=short.length-1
  
- const leftBtn= dq('.sm-left').addEventListener("click",()=>{
+ event(dq(".sm-left"),"click",()=>{
   index--
   if(index<0){
-   index=5
+   index=short.length-1
   } 
 shuffle.textContent=short[index]
  })
  
- const rightBtn= dq(".sm-right").addEventListener("click",()=>{
+ event(dq(".sm-right"),"click",()=>{
   index++
-  if(index>5){
+  if(index>(short.length-1)){
    index=0
   }  
 shuffle.textContent=short[index]
@@ -96,35 +96,31 @@ function smallCard(){
 }
 
 function allModal(){
- 
- (function(){ // 1 modal
+
  const clOn= dq(".cl_one_op")
   const clOff= dq(".cl_two_clo")
   const M= dq(".M")
 
-  const firstBtn= dq(".cl-btn").addEventListener("click",()=>{
-  clOn.style.display="none"
+  event(dq(".cl-btn"),"click",()=>{
+   clOn.style.display="none"
   clOff.style.display="flex"
   })
-  const secondBtn=dq(".cl-btn-clo").addEventListener("click",()=>{
-  clOn.style.display="flex"
+  
+  event(dq(".cl-btn-clo"),"click",()=>{
+    clOn.style.display="flex"
    clOff.style.display="none"
   })
   
   M.classList.contains("modal")?M.classList.remove("modal"):0
   
-  const brBtn= dq(".br button").addEventListener("click",()=>{
-   M.classList.add("modal")
+ event(dq(".br button"),"click",()=>{
+     M.classList.add("modal")
    M.classList.remove("hide")
-  })
-  const MOff= dq(".M i").addEventListener("click",()=>{
-     M.classList.add("hide")
+    })
+ event(dq(".M i"),"click",()=>{
+        M.classList.add("hide")
      M.classList.remove("modal")
     })
- 
- })()
-  
- 
 }
 
 function mainCard(){
@@ -191,7 +187,7 @@ function updatePeople(){
  
   for(let el of child) store.push(el)
 
- const leftBtn=dq(".ts-left").addEventListener("click",()=>{
+ event(dq(".ts-left"),"click",()=>{
   num--
   light.forEach((el,i)=>{
    if(el.classList.contains("light-up")) el.classList.remove("light-up")
@@ -213,10 +209,8 @@ function updatePeople(){
   child[4].classList.add("hide")
  }
    })
-
  })
- 
- const rightBtn=dq(".ts-right").addEventListener("click",()=>{
+ event(dq(".ts-right"),"click",()=>{
   num++
   light.forEach((el,i)=>{
    if(el.classList.contains("light-up")) el.classList.remove("light-up")
@@ -242,7 +236,6 @@ function updatePeople(){
      child[4].classList.add("hide")
     }
    })
-
  })
  
 }
@@ -277,19 +270,27 @@ function codeWrite(){
 function footItem(){
  const ftInfo= dq(".ft-info")
  const ftConnect= dq(".ft-con")
- const short= allData.footerData_1
+ const short= allData.footerData
+   const M= dq(".M")
  
  let footerItemDisplay= short.map(data=>{
   return (`<section class="flex-col"><h3>${data.title}</h3><ul class="flex-col"><li>${data._1}</li><li>${data._2}</li><li>${data._3}</li><li>${data._4}</li></ul></section>`)
  }).join("")
  ftInfo.innerHTML=footerItemDisplay
  
+   const ftLi= dqA(".ft-info li")
+   .forEach(e=>{
+    event(e,"click",()=>{
+     M.classList.add("modal")
+   M.classList.remove("hide")
+    })
+   })
 }
 
 
 //once fully loaded
-window.addEventListener("load",()=>{
-  interval(timing, 900)
+event(window,"load",()=>{
+   interval(timing, 900)
   intro()
   quote()
   smallCard()
@@ -300,7 +301,6 @@ window.addEventListener("load",()=>{
   lang()
   codeWrite()
   footItem()
-  updateCard
   updatePeople()
   /*testing*/
  timeOut(()=>{
@@ -310,7 +310,3 @@ window.addEventListener("load",()=>{
 })
 
 //body.style.transform="scale(0.4)"
-
-let test= dq("head style")
-//test.innerHTML= ".hd{background: red !important}"
-
