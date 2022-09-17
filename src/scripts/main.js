@@ -289,8 +289,8 @@ function footItem(){
 
 
 //once fully loaded
-event(window,"load",()=>{
-   interval(timing, 900)
+window.addEventListener("load",()=>{
+ interval(timing, 900)
   intro()
   quote()
   smallCard()
