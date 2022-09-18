@@ -20,7 +20,10 @@
 
  <link rel="scss" href="/src/styles/main.scss">
   <link rel="stylesheet" href="/src/styles/main.css">
+  
 <style id="css"></style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
 <body class="load-hide">
  
@@ -194,25 +197,25 @@
  <form action="" method="post" id="cnt-form">
   <fieldset>
    <legend>Full Name</legend>
-   <input type="text" placeholder="incredible" name="">
+   <input type="text" placeholder="incredible" name="user_name"true required>
   </fieldset>
   
  <fieldset>
    <legend>Phone Number</legend>
-   <input type="number" placeholder="optional">
+   <input type="number" placeholder="optional" name="user_number">
   </fieldset>
   
   <fieldset>
    <legend>Your E-mail</legend>
-   <input type="email" mame="" placeholder="your@gmail.you">
+   <input type="email" mame="user_email" placeholder="your@gmail.you" required>
   </fieldset>
   
   <fieldset>
    <legend>Will be waiting</legend>
-   <textarea placeholder="send us a mail." name=""></textarea>
+   <textarea placeholder="send us a mail." name="message" spellcheck="true" required></textarea>
   </fieldset>
   
-  <button type="submit" class="btn" disabled>send</button>
+  <button type="submit" class="btn">send</button>
  </form>
  
  <div></div>
