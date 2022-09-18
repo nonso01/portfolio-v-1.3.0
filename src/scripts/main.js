@@ -298,6 +298,22 @@ function normalize(){
  })
 }
 
+function mailMe(){
+ emailjs.init("lwYvE8DyzBBCRoja3")
+ 
+ event(dq("#cnt-form"),"submit",function(event){
+  
+  event.preventDefault()
+ emailjs.sendForm('service_xs39jlk', 'contact_form', this)
+ .then(function() {
+ //csl.log('SUCCESS!');
+ alert('message sent successfully ✌️')
+ }, function(error) {
+ //csl.log('FAILED...', error);
+ })
+ });
+  }
+
 //once fully loaded
 event(window,"load",()=>{
  interval(timing, 900)
@@ -312,7 +328,7 @@ event(window,"load",()=>{
   codeWrite()
   footItem()
   updatePeople()
-
+mailMe()
 normalize()
  timeOut(()=>{
   html.classList.remove("load")
