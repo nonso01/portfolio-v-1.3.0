@@ -189,8 +189,10 @@ html body {
 }
 .hd__tm div .mm {
   font-size: 0.5rem;
-  margin-left: 5%;
   display: inline-block;
+  width: var(--fts);
+  height: min-content;
+  margin-left: calc(var(--rad) / 2);
 }
 .hd__nv {
   grid-row: 1/2;
@@ -283,6 +285,7 @@ html body {
 .sm-card {
   grid-row: 2/5;
   grid-column: 4/8;
+  overflow: visible;
 }
 
 .sm-cd {
@@ -893,12 +896,12 @@ html body {
 }
 
 /* testing*/
-
-.load{
- background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
+.load {
+  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
-.load-hide{
- display: none;
+
+.load-hide {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

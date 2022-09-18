@@ -68,7 +68,7 @@
 
 .sm-cd:hover {
   transform: translateY(-5%) scale(1.09);
-  border-bottom: 4px solid var(--tx_4);
+  border: 2px solid var(--tx_4);
 }
 .sm-cd:hover ~ div {
   transform: scale(0.99);
@@ -98,9 +98,6 @@
 }
 .mn-card:hover span {
   color: var(--tx_3) !important;
-}
-.mn-card:hover h3 {
-  color: var(--tx_1) !important;
 }
 .mn-card:hover ~ div {
   opacity: 0.5;
