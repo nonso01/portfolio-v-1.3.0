@@ -287,9 +287,19 @@ function footItem(){
    })
 }
 
+function normalize(){
+  dqA("a")
+ .forEach(e=>{
+  e.target="_blank"
+ })
+ dqA("img")
+ .forEach(e=>{
+  e.alt="Martin\'s image"
+ })
+}
 
 //once fully loaded
-window.addEventListener("load",()=>{
+event(window,"load",()=>{
  interval(timing, 900)
   intro()
   quote()
@@ -302,11 +312,12 @@ window.addEventListener("load",()=>{
   codeWrite()
   footItem()
   updatePeople()
-  /*testing*/
+
+normalize()
  timeOut(()=>{
   html.classList.remove("load")
   body.classList.remove("load-hide")
- },6000)
+ },10000)
 })
 
 //body.style.transform="scale(0.4)"

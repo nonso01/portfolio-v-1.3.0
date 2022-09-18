@@ -152,7 +152,7 @@
     cls: "js",
     percent: "31.67%"
   },
-  {//look for the official icon
+  {
    img: "/assets/icons/bash.png",
     cls: "bash",
     percent: "19.77%"
