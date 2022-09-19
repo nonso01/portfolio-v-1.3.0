@@ -136,7 +136,7 @@ input, textarea {
 
 /* desktop first approach, will be refactoring from time to time*/
 html {
-  width: var(--st-w);
+  width: var(--mx-w);
   min-height: var(--mx-h);
   font-size: var(--fts);
   background-color: var(--bg_1);
@@ -895,13 +895,13 @@ html body {
   font-family: var(--tech);
 }
 
-/* testing*/
+/* testing
 .load {
   background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
 
 .load-hide {
   display: none;
-}
+}*/
 
 /*# sourceMappingURL=main.css.map */
