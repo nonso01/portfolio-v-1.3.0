@@ -10,7 +10,7 @@
 
 
 ## Brief
-> As you must have noticed, this is my portfolio's codebase, with all the assets and utilities. Am just gonna take you around showing what i learned while building it.
+> As you must have noticed, this is my portfolio's codebase, with all the assets and utilities. Am just gonna take you around showing you what i learned while building it.
 
 ___
 ## html
@@ -38,13 +38,13 @@ ___
 
 ```js
 
-const _= "i will confuse yoy"
+const _= "i will confuse you"
 console.log(_)
 
 ```
 > so far learning this language, has been a blessing in my journey as a dev, it's soo dynamic and i love it, `planning to be a full stack JavaScript developer`.
 
-- i combined css and js within my learning curve, made never made use of it until now.
+- i combined css and js within my learning curve, and never made use of it until now.
 - currently looking at `OOP/classes-modules/functional programming/client-side-js/server-side/three-js`
 ___
 
