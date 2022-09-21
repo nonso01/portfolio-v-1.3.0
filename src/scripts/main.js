@@ -299,6 +299,8 @@ function normalize(){
   dqA("a")
  .forEach(e=>{
   e.target="_blank"
+  let p= /\#(\w+)?/g
+  e.href.search(p)?e.target="_self":csl("error")
  })
  dqA("img")
  .forEach(e=>{
