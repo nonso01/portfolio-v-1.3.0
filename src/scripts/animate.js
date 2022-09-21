@@ -72,10 +72,10 @@ window.addEventListener("load",()=>{
  let h= dq(".css")
 let a={
  targets: h,
- width: ["20%","40%","60%","80%"],
+ width: ["0%","20%","40%","60%","80%","92.45%"],
  duration: 5000,
  loop: true,
- easing: "linear"
+ easing: "easeOutCubic"
  
 }
 anime(a) 

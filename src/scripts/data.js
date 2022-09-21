@@ -145,12 +145,12 @@
   {
    img: "/assets/icons/css3-logo-svgrepo-com.svg",
   cls: "css",
-  percent: "72.45%"
+  percent: "92.45%"
   },
   {
    img: "/assets/icons/javascript-logo-svgrepo-com.svg",
     cls: "js",
-    percent: "31.67%"
+    percent: "50.06%"
   },
   {
    img: "/assets/icons/bash.png",
@@ -158,7 +158,7 @@
     percent: "19.77%"
   }],
   aboutmeData:[
-   "I am a mid Web developer and mid system administrator, with over 2+ years of experience in the field of Web development, i recently joined the freelancer community so as to showcase some of my potential(s), by rendering numerous services, by building amazing products and pages and by collaborating with amazing people. i hopefully look forward to working with YOU, or to be  part of your team. stay safe and HAPPY CODING 🧢  ~nonso martin~"
+   "I am a junior Web developer and junior system administrator, with over 2+ years of experience in the field of Web development, i recently joined the freelancer community so as to showcase some of my potential(s), by rendering numerous services, by building amazing products and pages and by collaborating with amazing people. i hope i will get the chance to Work with you  stay safe and HAPPY CODING 🧢  ~nonso martin~"
    ],
  footerData:[
   {

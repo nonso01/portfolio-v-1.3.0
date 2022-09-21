@@ -90,7 +90,7 @@ function smallCard(){
  const cardDiv= dq('.sm-card')
  
  let smallCardDisplay= allData.smallCardData.map((data)=>{
-  return (`<div class="sm-cd flex-col trans"><img src=${data.img} alt="img" width="40px" height="40px"><h3>${data.h3}</h3><p>${data.p}.</p></div>`)
+  return (`<div class="sm-cd flex-col trans"><img src=${data.img} width="40px" height="40px"><h3>${data.h3}</h3><p>${data.p}.</p></div>`)
  }).join("")
  cardDiv.innerHTML= smallCardDisplay
 }
@@ -126,7 +126,7 @@ function allModal(){
 function mainCard(){
  const section= dq(".sec3")
  const short= allData.majorCardData_1
- let src= "src='/assets/icons/star.png' width='15px' height=15px class='star'"
+ let src= "src='/assets/icons/star.svg' width='15px' height=15px class='star'"
  
  
  short.forEach((data)=>{
@@ -134,7 +134,7 @@ function mainCard(){
   data.fee= "project fee"
  })
  let cardDisplay= short.map((data)=>{
-  return (`<div class="mn-card trans"><div class="card-img"><img src=${data.img} alt="x"></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
+  return (`<div class="mn-card trans"><div class="card-img"><img src=${data.img}></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
  }).join("")
  section.innerHTML= cardDisplay;
 }
@@ -158,7 +158,7 @@ function people(){
  
   (function() {
    const say = dq(".pl")
-   const data=["Friends","Companions","Families","Sponsors","Co-workers"]
+   const data=["Friends","Companions","Families","Sponsors","Co-workers","Boss"]
    say.textContent=data[0]
    
    interval(()=>{
@@ -174,7 +174,6 @@ function people(){
   return (`<div class="ts-card flex-col ${data.cls}"><article><img src=${data.img} width="60px" height="60px"><div><h4>${data.name}</h4><span>${data.job}</span></div></article><p>${data.word}</p></div>`)
  }).join("")
  T.innerHTML=peopleDisplay
- 
 }
 
 function updatePeople(){
@@ -255,7 +254,7 @@ function codeWrite(){
  let blink= dq(".ab-code .blink")
  const short= allData.aboutmeData
  let text= short.pop()
- let speed= 170
+ let speed= 150
  let i =0
  
  interval(()=>{
@@ -263,8 +262,17 @@ function codeWrite(){
   i++
   
    i%2==0?blink.classList.remove("blink"):blink.classList.add("blink")
+   if(i>=text.length){
+    timeOut(()=>{
+     code.style="background-color: var(--bg_1);"
+    },2000)
+    timeOut(()=>{
+     code.innerText=""
+    code.style="background-color: var(--ts);"
+     i=-1
+    },4000)
+   }
  },speed)
- 
 }
 
 function footItem(){
@@ -309,8 +317,8 @@ function mailMe(){
  //csl.log('SUCCESS!');
  alert('message sent successfully ✌️')
  }, function(error) {
- //csl.log('FAILED...', error);
- })
+  // csl(" an error occured")
+   })
  });
   }
 
@@ -328,7 +336,7 @@ event(window,"load",()=>{
   codeWrite()
   footItem()
   updatePeople()
-mailMe()
+//mailMe()
 normalize()
  timeOut(()=>{
   html.classList.remove("load")
