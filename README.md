@@ -1,33 +1,58 @@
+![nonso01](/assets/my-logos/logo.svg)
+
 ## portfolio-v-1.3.0 (Nonso Martin)
 
-` just another random self-taught dev`
+` Just Another Random Self-taught Dev 🧢`
 
 #! todo started on 19/08/22
 - update everything once nearly ready
 - `sass --watch file this-file` to keep track of every changes
 
 
-```js
- //one liner
-    el.classList.contains("light-up")?el.classList.remove("light-up"):num==i?el.classList.add("light-up"):num>bulbNum? num=-1:0
+## Brief
+> As you must have noticed, this is my portfolio's codebase, with all the assets and utilities. Am just gonna take you around showing what i learned while building it.
 
+___
+## html
+
+```html
+<h1>Hello Martin</h1>
 ```
-#! 07/09/22
-- was able to do something in the testimonials really happy 😌😌
+> There was Nothing more comprehensible than the html markup, extremely beginner friendly and due to it simplicity , it can run(interpreted) nearly in every device from wrist watch to quantum computer. `not really :)`
 
-#! refactoring my styles 16/09/22
-```js
-// looking at some docs on how to implement google maps
-// or using the navigator API
+- it took me roughly 3 months just to be comfortable with it `from h1 to forms`
+- then css3 came into this ugly life. 
 
-const location= navigator
-//and can be used to track devices as well
-```
-
+___
+## css
 ```css
-/* making use of filter properties on a modal*/
-.modal{
- /*this and that*/
-}
+color: martingreen;
 ```
-#! Work in `progress`
+> css removed the ugliness of html from my sight filling my heart with fake love `actually i cheated ;)`, the cascading style sheet, was filled with up and downs but i was able to pull through making use of it `not till the core i still have to create a 3d art`
+
+- it took roughly 5 months of padding and margins but i survived and centered a div `from display - animations`
+ 
+- guess who appeared ?
+___
+## JavaScript
+
+```js
+
+const _= "i will confuse yoy"
+console.log(_)
+
+```
+> so far learning this language, has been a blessing in my journey as a dev, it's soo dynamic and i love it, `planning to be a full stack JavaScript developer`.
+
+- i combined css and js within my learning curve, made never made use of it until now.
+- currently looking at `OOP/classes-modules/functional programming/client-side-js/server-side/three-js`
+___
+
+## bash
+```sh
+echo "Hello Martin"
+```
+
+___
+##! todo
+
