@@ -87,7 +87,9 @@ const dqA=(x)=> document.querySelectorAll(x)
 const [e1,e2,e3,e4,e5,e6]=[dq("e1"),dq("e2"),di("e3"),dqA("e4"), etc]
 
 /* 
-rather well it's not much but, it could simplify things.
+ well it's not much but, it could simplify things.
+ 
+ hope you can understand what i just did? if not good bye 🧢
 */
 ```
 #! todo
