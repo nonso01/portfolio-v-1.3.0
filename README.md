@@ -50,9 +50,44 @@ ___
 
 ## bash
 ```sh
-echo "Hello Martin"
+echo "Hello Martin, let's destroy some servers"
 ```
+> my story with bash is actually confusing, I don't know why i meet this guy, his really weird but he looks fruitful and powerful as well.
 
+- my learning curve has been really slow when it came to bash, but am back for more commands 
 ___
-##! todo
 
+### My Code structure (scripts)
+![Semicolon](/assets/images/semicolon.png)
+
+> [you can view it here](/src/scripts/main.js)
+
+> if you take a closer look, you will notice the absence of semicolons. JavaScript will understand and read your code without any issues iff it's well structured `proper \t and \n`. semicolons are optional in JavaScript which removes extra informations from the script keeping it cleaner `actually am not clean`
+
+- let's come back
+
+```js
+
+const csl=(x)=>console.log(x)
+const dc=(x)=>document.createElement(x)
+const dq=(x)=>document.querySelector(x)
+const di=(x)=> document.getElementById(x)
+const dqA=(x)=> document.querySelectorAll(x)
+
+/*
+ - i can't compare this to the almighty $(), which could allow one to see Pluto
+ 
+ - if you find it helpful you can just try it
+ 
+ - rather than writing 20+ lines of code filled with document.getThisAndThat()
+ 
+ - you could easily make use of dq() or dqA() or di() with ES6 features
+*/
+
+const [e1,e2,e3,e4,e5,e6]=[dq("e1"),dq("e2"),di("e3"),dqA("e4"), etc]
+
+/* 
+rather well it's not much but, it could simplify things.
+*/
+```
+#! todo
