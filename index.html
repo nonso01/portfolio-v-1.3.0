@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="load">
+<html lang="en" class="">
 
 <head>
  <meta charset="UTF-8">
@@ -25,10 +25,11 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </head>
-<body class="load-hide">
+<body class="load">
  
  <!--Caution: am not semantic and i make use of sections inappropriately -->
-
+<div class="body-wrap load-hide">
+ 
 <header class="hd" id="home">
  
  <div class="hd__tm">
@@ -38,12 +39,17 @@
  <nav class="hd__nv">
   
 <div class="flex-row hd__btn">
- <button><a href="#home"><i class="fa-solid fa-house fa-2x"></i></a></button>
-  <button><a href="#about"><i class="fa-solid fa-user-check fa-2x"></i></a></button>
- <button><a href="#contact"><i class="fa-solid fa-headset fa-2x"></i></a></button>
- <button><a href="https://github.com/nonso01"><i class="fa-brands fa-github fa-2x"></i></a></button>
- <button><a href="https://www.linkedin.com/in/nonso-martin-80b221238"><i class="fa-brands fa-linkedin fa-2x"></i></a></button>
- <button><a href="#"><i class="fa-solid fa-user-plus fa-2x"></i></a></button>
+ <button><a href="#home" target="_self"><i class="fa-solid fa-house fa-2x"></i></a></button>
+ 
+  <button><a href="#about" target="_self"><i class="fa-solid fa-user-check fa-2x"></i></a></button>
+  
+ <button><a href="#contact" target="_self"><i class="fa-solid fa-headset fa-2x"></i></a></button>
+ 
+ <button><a href="https://github.com/nonso01" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></button>
+ 
+ <button><a href="https://www.linkedin.com/in/nonso-martin-80b221238" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></button>
+ 
+ <button><a href="#"><i class="fa-regular fa-moon fa-2x"></i></a></button>
 
 </div>
 <!-- mobile will be triggered by JS-->
@@ -154,12 +160,20 @@
  <span></span>
 </div>
 
-<section class="sec7"contact id="about">
+<section class="sec7" id="about">
  <div class="myIco"></div>
  <div class="abOne flex-row">
   <div></div>
   <section class="flex-col">
-   <p>If you scrolled right down to this section, then thanks for viewing this fancy page of mine. through out this page, I have been talking about <i>Martin</i> as an enterprise and actually am an enterprise of my own so are you!, it will be my pleasure, getting corrections from a senior dev. for more just send a mail  <i>Thanks Again!!</i></p>
+  <h2>What you should know</h2>
+  <ul>
+   <li><span>Age</span> = 627,566,400 seconds old</li>
+   <li><span>full name</span> = Nonso Martin</li>
+   <li><span>Nationality</span> = Nigerian</li>
+   <li><span>Education</span> = MBBS(still on training)</li>
+   <li><span>speaks</span> = English/Français</li>
+   <li></li>
+  </ul>
   </section>
  </div>
  
@@ -235,16 +249,19 @@
 <div class="ft-con flex-row">
  <h2>Let's Connect =></h2>
  <ul class="flex-row">
- <li class=""><a href="https://discordapp.com/users/907553467399307284"><i class="fa-brands fa-discord fa-2x"></i></a></li>
- <li class=""><a href="https://twitter.com/Nonsomartin6"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
- <li class=""><a href="https://www.linkedin.com/in/nonso-martin-80b221238"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
- <li class=""><a href="https://t.me/+2347087840213"><i class="fa-brands fa-telegram fa-2x"></i></a></li>
-  <li class=""><a href="https://wa.me/+2347087840213"><i class="fa-brands fa-whatsapp fa-2x"></i></a></li>
+ <li class=""><a href="https://discordapp.com/users/907553467399307284" target="_blank"><i class="fa-brands fa-discord fa-2x"></i></a></li>
+ <li class=""><a href="https://twitter.com/Nonsomartin6" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+ <li class=""><a href="https://www.linkedin.com/in/nonso-martin-80b221238" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+ <li class=""><a href="https://t.me/+2347087840213" target="_blank"><i class="fa-brands fa-telegram fa-2x"></i></a></li>
+  <li class=""><a href="https://wa.me/+2347087840213" target="_blank"><i class="fa-brands fa-whatsapp fa-2x"></i></a></li>
 
  </ul>
 </div>
 
 </footer>
+
+</div><!--end of body wrapper-->
+
 
 <div class="M flex-col hide">
  <div class="flex-row">
@@ -257,7 +274,9 @@
  </i>
  <p>Sorry we are currently working on this section, kindly bear with us.</p>
 </div>
- <div class="overlay trans"></div>
+<div class="overlay trans"></div>
+
+
 
 <!-- only js after this Line-->
 <script src="/src/scripts/main.js" type="module"></script>
