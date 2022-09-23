@@ -26,6 +26,7 @@ $cn: center;
 $im: !important;
 $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
 
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 @import url("/src/styles/media.css");
 @import url("/src/styles/animate.css");
 
@@ -57,17 +58,17 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
  grid-gap: $gap;
 }
 
-@mixin btn-df($bgcol,$bghov,$texcol,$texhov,$sc,$rad){
+@mixin btn-df($bgcol,$texcol,$texhov,$sc,$rad){
  background-color: $bgcol;
  color: $texcol;
  border-radius: $rad;
- transition: var(--trans);
+ box-shadow: 0 1px 8px 0 #FFAD3199;
  border: 1px solid var(--ts);
  &:hover{
-  transition: var(--trans);
-  background-color: $bghov;
+  background-color: var(--ts);
   color: $texhov;
   transform: scale($sc);
+  box-shadow: none;
  }
 }
 
@@ -91,9 +92,10 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
  --tx_5: #{$col_tx_5};
  --ts: #{$ts};
  --cn: #{$cn};
- --tech: "#{$tech}";
- --ubun: "#{$ubun}";
- --opn-sn: "#{$opn-sn}";
+ --tech: "#{$tech}",sans-serif;
+ --ubun: "#{$ubun}" ,sans-serif;
+ --opn-sn: "#{$opn-sn}",sans-serif;
+ --ov: "Overpass",sans-serif;
  --mono: monospace;
  --rad: #{$rad};
  --trans: #{$trans};
@@ -107,7 +109,7 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
 
 /*  Universal*/
 .btn{ 
- @include btn-df(var(--tx_4),var(--bg_2),var(--bg_2),var(--tx_4),0.899,calc(var(--rad)/2));
+ @include btn-df(var(--tx_4),var(--bg_2),var(--tx_4),0.899,calc(var(--rad)/2));
  font-family: var(--ubun);
  font-weight: bold;
  cursor: pointer;
@@ -342,7 +344,7 @@ html{
 }
 
 .cl-img{
- background: var(--ts) url("/assets/images/trends-in-2021_1.jpeg") no-repeat padding-box center/cover;
+ background: var(--ts) url("/assets/images/trends-in-2021_1.jpeg") no-repeat padding-box center/100%;
  border: 2px solid var(--ts);
  border-radius: var(--rad);
 }
@@ -674,7 +676,7 @@ overflow: visible;
   opacity: 0.9;
  }
  h2{
-  font-family: cursive;
+  font-family: var(--ov);
   font-size: 2.4rem;
  }
 }
@@ -711,12 +713,7 @@ overflow: visible;
  section{
   width: 60%;
   text-align: var(--cn);
-  i,u{
-   color: var(--tx_4);
-   font-family: var(--mono);
-   font-weight: bold;
-  }
- 
+  h2,span{color: var(--tx_4);}
  }
 }
 
@@ -889,12 +886,14 @@ overflow: visible;
   font-family: var(--tech);
  }
 }
-/* testing
+/* testing*/
 
-.load{
+/*.load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
 .load-hide{
  display: none;
 }*/
 //*{ border: $bd;}
+
+

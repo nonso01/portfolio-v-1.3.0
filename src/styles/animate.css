@@ -77,19 +77,8 @@
 
 .cl-img.trans:hover {
   position: relative;
-  transform: translateX(-2%);
-}
-.cl-img.trans:hover:before {
-  display: block;
-  position: absolute;
-  content: "Explore more";
-  height: 100%;
-  width: 50%;
-  z-index: 10;
-  background-color: rgba(40, 40, 40, 0.8);
-  font-size: min(100%, 1.5rem);
-  color: var(--tx_4);
-  border-radius: inherit;
+  background-size: 150%;
+  border-color: var(--bg_1);
 }
 
 .mn-card:hover {

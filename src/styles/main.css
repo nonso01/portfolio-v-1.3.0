@@ -1,4 +1,5 @@
 /*---------Happy Coding don't delete everything this time  :-(--------------*/
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
 @import url("/src/styles/media.css");
 @import url("/src/styles/animate.css");
 @font-face {
@@ -34,9 +35,10 @@
   --tx_5: #FF2348;
   --ts: transparent;
   --cn: center;
-  --tech: "tech";
-  --ubun: "ubuntu";
-  --opn-sn: "openSans";
+  --tech: "tech",sans-serif;
+  --ubun: "ubuntu" ,sans-serif;
+  --opn-sn: "openSans",sans-serif;
+  --ov: "Overpass",sans-serif;
   --mono: monospace;
   --rad: 0.629rem;
   --trans: all 0.2s cubic-bezier(0.5, 0.2, 0, 0.8);
@@ -53,17 +55,17 @@
   background-color: var(--tx_4);
   color: var(--bg_2);
   border-radius: calc(var(--rad) / 2);
-  transition: var(--trans);
+  box-shadow: 0 1px 8px 0 rgba(255, 173, 49, 0.6);
   border: 1px solid var(--ts);
   font-family: var(--ubun);
   font-weight: bold;
   cursor: pointer;
 }
 .btn:hover {
-  transition: var(--trans);
-  background-color: var(--bg_2);
+  background-color: var(--ts);
   color: var(--tx_4);
   transform: scale(0.899);
+  box-shadow: none;
 }
 
 .flex-row {
@@ -318,7 +320,7 @@ html body {
 }
 
 .cl-img {
-  background: var(--ts) url("/assets/images/trends-in-2021_1.jpeg") no-repeat padding-box center/cover;
+  background: var(--ts) url("/assets/images/trends-in-2021_1.jpeg") no-repeat padding-box center/100%;
   border: 2px solid var(--ts);
   border-radius: var(--rad);
 }
@@ -664,7 +666,7 @@ html body {
   opacity: 0.9;
 }
 .fancy h2 {
-  font-family: cursive;
+  font-family: var(--ov);
   font-size: 2.4rem;
 }
 
@@ -704,10 +706,8 @@ html body {
   width: 60%;
   text-align: var(--cn);
 }
-.abOne section i, .abOne section u {
+.abOne section h2, .abOne section span {
   color: var(--tx_4);
-  font-family: var(--mono);
-  font-weight: bold;
 }
 
 .abTwo {
@@ -894,7 +894,6 @@ html body {
 }
 
 /* testing*/
-
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
