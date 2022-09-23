@@ -158,7 +158,7 @@
     percent: "19.77%"
   }],
   aboutmeData:[
-   "I am a junior Web developer and junior system administrator, with over 2+ years of experience in the field of Web development, i recently joined the freelancer community so as to showcase some of my potential(s), by rendering numerous services, by building amazing products and pages and by collaborating with amazing people. i hope i will get the chance to Work with you  stay safe and HAPPY CODING 🧢  ~nonso martin~"
+   "I am a junior Web developer and junior system administrator, with over 2+ years of experience in the field of Web development, i recently joined the freelance community so as to showcase some of my potential(s), by rendering numerous services, by building amazing products and pages and by collaborating with amazing people. i hope i will get the chance to Work with you  stay safe and HAPPY CODING 🧢  ~nonso martin~"
    ],
  footerData:[
   {

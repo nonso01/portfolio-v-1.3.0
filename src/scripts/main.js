@@ -13,13 +13,9 @@ const dqA=(x)=> document.querySelectorAll(x)
 
 const html=dq("html")
 const body= dq('body')
+const bodyDiv= dq(".body-wrap")
 
-function creatElem(chd,cls,prt,text=null){
- let el= dc(chd)
- el.classList.add(cls)
- prt.appendChild(el)
- el.textContent= text
-}
+
 
 function interval(f,time){
 const interval= setInterval(f,time)
@@ -51,6 +47,20 @@ function timing(){
  })
 }
 
+function mode(){
+ 
+ event(dq(".fa-moon"),"click",(e)=>{
+  e.preventDefault()
+  if(e.target.classList.contains("fa-moon")){
+e.target.classList.remove("fa-moon")
+   e.target.classList.add("fa-sun")
+  }
+  else{
+  e.target.classList.remove("fa-sun")
+   e.target.classList.add("fa-moon")
+  }
+ })
+}
 function intro(){
  const introduce= dq('.hd__title')
  const short= allData.introText
@@ -296,15 +306,13 @@ function footItem(){
 }
 
 function normalize(){
-  dqA("a")
- .forEach(e=>{
-  e.target="_blank"
-  let p= /\#(\w+)?/g
-  e.href.search(p)?e.target="_self":csl("error")
- })
  dqA("img")
  .forEach(e=>{
   e.alt="Martin\'s image"
+ })
+ 
+ dqA(".btn").forEach(e=>{
+  e.classList.add("trans")
  })
 }
 
@@ -338,11 +346,12 @@ event(window,"load",()=>{
   codeWrite()
   footItem()
   updatePeople()
-//mailMe()
+  mode()
+mailMe()
 normalize()
  timeOut(()=>{
-  html.classList.remove("load")
-  body.classList.remove("load-hide")
+  body.classList.remove("load")
+  bodyDiv.classList.remove("load-hide")
  },10000)
 })
 
