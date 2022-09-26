@@ -88,13 +88,13 @@
      link: "https://nonso01js.netlify.app/"
     }
     ,{
-     img: "/assets/icons/default.png",
+     img: "/assets/images/orderSummary.jpg",
       h3: "Order summary",
       p: "My third frontendmentor challenge",
       link: "https://github.com/nonso01/"
     },
     {
-     img: "/assets/icons/default.png",
+     img: "/assets/images/nftCard.jpg",
      h3: "Nft Card",
      p: "One of my first works during my frontend journey",
      Link: "https://github.com/nonso01/"

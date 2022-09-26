@@ -1,6 +1,5 @@
  "use strict"
 
-import anime from '/src/animejs/index.js'
 import {allData} from '/src/scripts/data.js'
 
 /* To every line writing there's a better alternative --Martin-- */
@@ -14,6 +13,7 @@ const dqA=(x)=> document.querySelectorAll(x)
 const html=dq("html")
 const body= dq('body')
 const bodyDiv= dq(".body-wrap")
+const bodyWidth=window.innerWidth
 
 
 
@@ -27,6 +27,10 @@ function timeOut(f,time){
 
 function event(e,t,f){
  const event= e.addEventListener(t,f)
+}
+
+function rmEvent(e,t,f){
+ const remove= e.removeEventListener(t,f)
 }
 
 function timing(){
@@ -61,6 +65,7 @@ e.target.classList.remove("fa-moon")
   }
  })
 }
+
 function intro(){
  const introduce= dq('.hd__title')
  const short= allData.introText
@@ -196,8 +201,8 @@ function updatePeople(){
  
   for(let el of child) store.push(el)
 
- event(dq(".ts-left"),"click",()=>{
-  num--
+function tsLeft(){
+ num--
   light.forEach((el,i)=>{
    if(el.classList.contains("light-up")) el.classList.remove("light-up")
    if(num===i) el.classList.add("light-up")
@@ -217,9 +222,13 @@ function updatePeople(){
   child[3].classList.add("hide")
   child[4].classList.add("hide")
  }
+ 
    })
- })
- event(dq(".ts-right"),"click",()=>{
+   
+} 
+event(dq(".ts-left"),"click",tsLeft)
+
+ function tsRight(){
   num++
   light.forEach((el,i)=>{
    if(el.classList.contains("light-up")) el.classList.remove("light-up")
@@ -245,8 +254,23 @@ function updatePeople(){
      child[4].classList.add("hide")
     }
    })
- })
+ } 
+event(dq(".ts-right"),"click",tsRight)
  
+ /*mb tb*/
+ if(bodyWidth<=890){
+  rmEvent(dq(".ts-left"),"click",tsLeft)
+  rmEvent(dq(".ts-right"),"click",tsRight)
+  
+  for(let i=0; i<child.length;i++){
+   child[i].style.display="none"
+   switch (i) {
+    case 0:
+     child[i].style.display="flex" 
+   }
+  }
+ }
+
 }
 
 function lang(){
@@ -285,6 +309,22 @@ function codeWrite(){
  },speed)
 }
 
+function mailMe(){
+ emailjs.init("lwYvE8DyzBBCRoja3")
+ 
+ event(dq("#cnt-form"),"submit",function(event){
+  
+  event.preventDefault()
+ emailjs.sendForm('service_xs39jlk', 'contact_form', this)
+ .then(function() {
+ //csl.log('SUCCESS!');
+ alert('message sent successfully ✌️')
+ }, function(error) {
+  // csl(" an error occured")
+   })
+ });
+  }
+
 function footItem(){
  const ftInfo= dq(".ft-info")
  const ftConnect= dq(".ft-con")
@@ -316,21 +356,6 @@ function normalize(){
  })
 }
 
-function mailMe(){
- emailjs.init("lwYvE8DyzBBCRoja3")
- 
- event(dq("#cnt-form"),"submit",function(event){
-  
-  event.preventDefault()
- emailjs.sendForm('service_xs39jlk', 'contact_form', this)
- .then(function() {
- //csl.log('SUCCESS!');
- alert('message sent successfully ✌️')
- }, function(error) {
-  // csl(" an error occured")
-   })
- });
-  }
 
 //once fully loaded
 event(window,"load",()=>{
@@ -347,7 +372,7 @@ event(window,"load",()=>{
   footItem()
   updatePeople()
   mode()
-mailMe()
+//mailMe()
 normalize()
  timeOut(()=>{
   body.classList.remove("load")
