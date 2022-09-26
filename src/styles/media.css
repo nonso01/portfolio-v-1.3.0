@@ -1,8 +1,171 @@
 /* will be handled with resize.js*/
 @import url("/src/styles/main.css");
 :root {
-  --mb: 3 ;
+  --sz-100: 6.289703rem;
 }
 
+/*@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {}*/
+#sz-mb .hd, #sz-tb .hd {
+  height: calc(var(--sz-100) * 8);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+#sz-mb .hd__tm div.trans, #sz-tb .hd__tm div.trans {
+  transform: none;
+  border: none;
+}
+#sz-mb .hd__nv, #sz-tb .hd__nv {
+  flex: 0.1 1 auto;
+  width: 15%;
+  align-self: flex-end;
+  position: relative;
+}
+#sz-mb .hd .bar, #sz-tb .hd .bar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg_1);
+  border-radius: var(--rad);
+  cursor: pointer;
+}
+#sz-mb .hd .bar span, #sz-tb .hd .bar span {
+  width: 80%;
+  height: 16%;
+  background-color: var(--bg_2);
+  border-radius: var(--rad);
+  transition: var(--trans);
+}
+#sz-mb .hd .bar span:first-child, #sz-tb .hd .bar span:first-child {
+  transform: scaleX(0.5) translateX(-50%);
+}
+#sz-mb .hd .bar span:last-child, #sz-tb .hd .bar span:last-child {
+  transform: scaleX(0.5) translateX(50%);
+}
+#sz-mb .hd .bar:hover span, #sz-tb .hd .bar:hover span {
+  transform: none;
+  background-color: var(--tx_3);
+  transition: var(--trans);
+}
+#sz-mb .hd__btn, #sz-tb .hd__btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transform: translateX(-150%) scale(0.899);
+  transition: var(--trans);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 25, 25, 0.9);
+  flex-flow: column;
+}
+#sz-mb .hd__btn.show, #sz-tb .hd__btn.show {
+  z-index: 10;
+  transform: translateX(0) scale(1);
+  transition: var(--trans);
+}
+#sz-mb .hd__img, #sz-tb .hd__img {
+  width: 100%;
+  flex: 0.3 1 auto;
+}
+#sz-mb .hd__intro, #sz-tb .hd__intro {
+  flex: 0.5 1 auto;
+}
+#sz-mb .hd__intro form, #sz-tb .hd__intro form {
+  width: 100%;
+  background-color: var(--ts);
+}
+#sz-mb .hd__intro form #hd-in, #sz-tb .hd__intro form #hd-in {
+  width: 60%;
+  padding: 2% 7%;
+}
+
+#sz-mb .sec1, #sz-tb .sec1 {
+  min-height: calc(var(--sz-100) * 9);
+  display: flex;
+  flex-flow: column;
+}
+#sz-mb .sec1 .sm-div, #sz-tb .sec1 .sm-div {
+  flex: 0.15 1 auto;
+}
+#sz-mb .sec1 .sm-card, #sz-tb .sec1 .sm-card {
+  flex: 0.85 1 auto;
+  flex-flow: column;
+  align-items: var(--cn);
+  justify-content: space-evenly;
+}
+#sz-mb .sec1 .sm-card div, #sz-tb .sec1 .sm-card div {
+  width: 90%;
+  margin: var(--rad);
+}
+
+#sz-mb .sec2, #sz-tb .sec2 {
+  height: calc(var(--sz-100) * 5);
+  display: flex;
+  flex-flow: column;
+}
+#sz-mb .sec2 div:not(.cl-img), #sz-tb .sec2 div:not(.cl-img) {
+  flex: 0.55 1 auto;
+}
+#sz-mb .sec2 div:not(.cl-img) .btn, #sz-tb .sec2 div:not(.cl-img) .btn {
+  width: 70%;
+}
+#sz-mb .sec2 .cl-img, #sz-tb .sec2 .cl-img {
+  flex: 0.45 1 auto;
+}
+
+#sz-mb .sec3 {
+  height: calc(var(--sz-100) * 23);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+#sz-tb .sec3 {
+  height: calc(var(--sz-100) * 10);
+  display: grid;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--rad);
+}
+
+#sz-tb .br .btn, #sz-mb .br .btn {
+  width: 70%;
+}
+
+#sz-mb .sec4, #sz-tb .sec4 {
+  height: calc(var(--sz-100) * 6.9);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+#sz-mb .sec4 .pj-sh, #sz-tb .sec4 .pj-sh {
+  flex: 0.8 1 auto;
+  flex-flow: row wrap;
+  width: var(--st-w);
+}
+#sz-mb .sec4 .pj-sh div, #sz-tb .sec4 .pj-sh div {
+  width: 45%;
+  height: 45%;
+  padding: 1%;
+  flex-flow: column;
+  transform: none;
+  margin: calc(var(--rad) / 2);
+}
+#sz-mb .sec4 .pj-sh div section, #sz-tb .sec4 .pj-sh div section {
+  height: 35%;
+  width: 42%;
+}
+#sz-mb .sec4 .pj-sh div article, #sz-tb .sec4 .pj-sh div article {
+  height: 60%;
+}
+
+#sz-mb .ts-card, #sz-tb .ts-card {
+  width: 95%;
+  max-width: calc(80% - 10vw);
+}
 
 /*# sourceMappingURL=media.css.map */

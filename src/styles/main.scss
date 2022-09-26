@@ -62,7 +62,7 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
  background-color: $bgcol;
  color: $texcol;
  border-radius: $rad;
- box-shadow: 0 1px 8px 0 #FFAD3199;
+ box-shadow: 0 0.5px 8px 0 #FFAD3199;
  border: 1px solid var(--ts);
  &:hover{
   background-color: var(--ts);
@@ -172,7 +172,7 @@ input,textarea{
 
 /* desktop first approach, will be refactoring from time to time*/
 html{
-  width: var(--mx-w);
+  width: var(--st-w);
  min-height: var(--mx-h);
  font-size: var(--fts);
  background-color: var(--bg_1);
@@ -184,7 +184,7 @@ html{
  }
 }
 
-@media (max-width: 360px){
+@media (max-width: 380px){
  html{
   width: var(--st-w);
   min-height: var(--mx-h);
@@ -258,7 +258,7 @@ html{
    height: 18%;
    width: 85%;
    align-self: var(--cn);
-   background: var(--bg_1);
+   background-color: var(--bg_1);
    border-radius: var(--rad);
    input{
     flex: 0.2 1 auto;
@@ -888,12 +888,9 @@ overflow: visible;
 }
 /* testing*/
 
-/*.load{
+.load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
 .load-hide{
  display: none;
-}*/
-//*{ border: $bd;}
-
-
+}

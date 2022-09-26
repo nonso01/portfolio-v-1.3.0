@@ -55,7 +55,7 @@
   background-color: var(--tx_4);
   color: var(--bg_2);
   border-radius: calc(var(--rad) / 2);
-  box-shadow: 0 1px 8px 0 rgba(255, 173, 49, 0.6);
+  box-shadow: 0 0.5px 8px 0 rgba(255, 173, 49, 0.6);
   border: 1px solid var(--ts);
   font-family: var(--ubun);
   font-weight: bold;
@@ -150,7 +150,7 @@ html body {
   position: relative;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   html {
     width: var(--st-w);
     min-height: var(--mx-h);
@@ -225,7 +225,7 @@ html body {
   height: 18%;
   width: 85%;
   align-self: var(--cn);
-  background: var(--bg_1);
+  background-color: var(--bg_1);
   border-radius: var(--rad);
 }
 .hd__intro form input {
@@ -894,11 +894,12 @@ html body {
 }
 
 /* testing*/
-.load{
- background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
+.load {
+  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
 }
-.load-hide{
- display: none;
+
+.load-hide {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
