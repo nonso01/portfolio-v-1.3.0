@@ -1,19 +1,20 @@
 /*---------Happy Coding don't delete everything this time  :-(--------------*/
-@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Overpass&family=Ubuntu&display=swap");
 @import url("/src/styles/media.css");
 @import url("/src/styles/animate.css");
 @font-face {
   font-family: "tech";
   src: url("/assets/fonts/Technology.ttf");
+} /*
+@font-face {
+ font-family: $ubun;
+ src: url("/assets/fonts/Ubuntu-Regular.ttf");
 }
 @font-face {
-  font-family: "ubuntu";
-  src: url("/assets/fonts/Ubuntu-Regular.ttf");
+ font-family: $opn-sn;
+ src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
-@font-face {
-  font-family: "openSans";
-  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
-}
+*/
 * {
   box-sizing: border-box;
   font-family: var(--opn-sn);
@@ -36,8 +37,8 @@
   --ts: transparent;
   --cn: center;
   --tech: "tech",sans-serif;
-  --ubun: "ubuntu" ,sans-serif;
-  --opn-sn: "openSans",sans-serif;
+  --ubun: "Ubuntu" ,sans-serif;
+  --opn-sn: "Open Sans",sans-serif;
   --ov: "Overpass",sans-serif;
   --mono: monospace;
   --rad: 0.629rem;
