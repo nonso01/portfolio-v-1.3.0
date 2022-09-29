@@ -354,6 +354,11 @@ function normalize(){
  dqA(".btn").forEach(e=>{
   e.classList.add("trans")
  })
+ dqA("[type=submit]").forEach(e=>{
+  event(e,"submit",()=>{
+   e.preventDefault()
+  })
+ })
 }
 
 

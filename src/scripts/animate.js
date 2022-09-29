@@ -69,9 +69,9 @@ window.addEventListener("load",()=>{
  myCanvas()
  
  
- let h= dq(".css")
+// let h= dq(".css")
 let a={
- targets: h,
+ targets: [".html",".css",".js",".bash"],
  width: ["0%","20%","40%","60%","80%","92.45%"],
  duration: 5000,
  loop: true,

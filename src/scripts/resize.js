@@ -10,8 +10,7 @@ const dqA=(x)=> document.querySelectorAll(x)
 const html=dq("html")
 const body= dq('body')
 const bodyDiv= dq(".body-wrap")
-const bodyWidth=window.innerWidth
-
+let bodyWidth=window.innerWidth
 
 function interval(f,time){
 const interval= setInterval(f,time)
@@ -28,9 +27,7 @@ function event(e,t,f){
 const hamburger= dq(".bar")
  const cancelHam= dq(".cancel")
  
- timeOut(()=>{
- mediaSize()
-},100)
+ timeOut(mediaSize,100)
 
 function mediaSize(){
  
@@ -40,13 +37,14 @@ function mediaSize(){
   cancelHam.classList.remove("hide") 
  }
  
- else if(bodyWidth>=600 && bodyWidth<=890) {
+ else if(bodyWidth>=600 && bodyWidth<=960) {
   bodyDiv.setAttribute('id',"sz-tb")
    hamburger.classList.remove("hide")
    cancelHam.classList.remove("hide") 
  }
  
 else bodyDiv.setAttribute("id","sz-dk")
+
 csl(bodyWidth)
 }
 
@@ -64,9 +62,10 @@ function toggleHam(){
 
 
 event(window,"load",()=>{
- event(window,"resize",()=>{mediaSize()})
+ event(window,"resize",mediaSize)
 
  toggleHam()
+ 
 })
 
 
