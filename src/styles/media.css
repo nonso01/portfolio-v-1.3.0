@@ -4,10 +4,6 @@
   --sz-100: 6.289703rem;
 }
 
-/*@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {}*/
 #sz-mb .hd, #sz-tb .hd {
   height: calc(var(--sz-100) * 8);
   display: flex;
@@ -57,7 +53,7 @@
   transform: translateX(-150%) scale(0.899);
   transition: var(--trans);
   width: 100%;
-  height: 100%;
+  height: calc(var(--sz-100) * 5);
   background-color: rgba(25, 25, 25, 0.9);
   flex-flow: column;
 }
@@ -117,7 +113,7 @@
 }
 
 #sz-mb .sec3 {
-  height: calc(var(--sz-100) * 23);
+  height: calc(var(--sz-100) * 20);
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
@@ -163,9 +159,96 @@
   height: 60%;
 }
 
-#sz-mb .ts-card, #sz-tb .ts-card {
+#sz-mb .sec5 .ts-card, #sz-tb .sec5 .ts-card {
   width: 95%;
   max-width: calc(80% - 10vw);
+}
+#sz-mb .sec5 .ts-card article, #sz-tb .sec5 .ts-card article {
+  justify-content: space-evenly;
+}
+#sz-mb .sec5 .ts-btn, #sz-tb .sec5 .ts-btn {
+  display: none;
+}
+
+#sz-mb #cnv, #sz-tb #cnv {
+  height: 100% !important;
+  opacity: 0.8;
+}
+
+#sz-mb .sec6, #sz-tb .sec6 {
+  height: calc(var(--sz-100) * 8);
+  display: flex;
+  flex-flow: column;
+}
+#sz-mb .sec6 div, #sz-tb .sec6 div {
+  flex: 0.5 1 auto;
+}
+#sz-mb .sec6 div .lang-card, #sz-tb .sec6 div .lang-card {
+  transform: none;
+  width: 90%;
+  margin: calc(var(--rad) / 2);
+}
+
+#sz-mb #about, #sz-tb #about {
+  height: calc(var(--sz-100) * 9.2);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+#sz-mb #about .myIco, #sz-tb #about .myIco {
+  height: 20%;
+  min-width: 100%;
+}
+#sz-mb #about .abOne, #sz-tb #about .abOne {
+  height: 35%;
+}
+#sz-mb #about .abTwo, #sz-tb #about .abTwo {
+  height: 45%;
+}
+
+#sz-mb #contact, #sz-tb #contact {
+  height: calc(var(--sz-100) * 7.5);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+#sz-mb #contact form, #sz-tb #contact form {
+  height: 60%;
+}
+#sz-mb #contact form + div, #sz-tb #contact form + div {
+  width: 100%;
+  height: 35%;
+}
+
+#sz-mb .ft {
+  height: calc(var(--sz-100) * 10);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+#sz-mb .ft iframe {
+  order: 3;
+  height: 30%;
+}
+#sz-mb .ft-info {
+  height: 58%;
+  order: 0;
+  flex-flow: column;
+}
+#sz-mb .ft-info section {
+  align-self: var(--cn);
+}
+#sz-mb .ft-info section li, #sz-mb .ft-info section h3 {
+  text-align: var(--cn);
+}
+#sz-mb .ft-copy {
+  order: -1;
+}
+#sz-mb .ft-con {
+  height: 10%;
+}
+#sz-mb .ft-con ul {
+  width: 65%;
 }
 
 /*# sourceMappingURL=media.css.map */

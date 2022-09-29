@@ -11,12 +11,28 @@
 }
 
 .dot {
-  width: calc(var(--fts) / 2);
-  height: calc(var(--fts) / 2);
-  border-radius: calc(var(--st-w) / 2);
-  background-color: var(--bg_1);
+  --sz: 5px;
+  --col: var(--tx_3) 3px,var(--ts) 0px;
+  --half: calc(var(--st-w)/2);
+  width: 2.0127rem;
+  height: calc(var(--rad) - 2px);
+  background-image: radial-gradient(var(--sz) at 10% var(--half), var(--col)), radial-gradient(var(--sz) at 50% var(--half), var(--col)), radial-gradient(var(--sz) at 90% var(--half), var(--col));
+  animation-name: bg;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes bg {
+  0%, 20% {
+    opacity: 0.2;
+  }
+  30%, 50% {
+    opacity: 0.6;
+  }
+  60%, 90% {
+    opacity: 1;
+  }
+}
 .modal {
   width: max-content;
   min-width: 30%;
@@ -45,7 +61,7 @@
 .modal i.fa-solid {
   align-self: flex-end;
 }
-.modal + .overlay {
+.modal ~ .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +98,7 @@
 }
 
 .mn-card:hover {
-  border: calc(var(--rad) / 2.1) solid var(--tx_3);
+  border: calc(var(--rad) / 2.9) solid var(--tx_3);
   transform: translateY(-4%) scale(0.9);
 }
 .mn-card:hover span {

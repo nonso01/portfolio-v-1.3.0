@@ -55,7 +55,7 @@
   background-color: var(--tx_4);
   color: var(--bg_2);
   border-radius: calc(var(--rad) / 2);
-  box-shadow: 0 0.5px 8px 0 rgba(255, 173, 49, 0.6);
+  box-shadow: 0 0.5px 5px 0 rgba(255, 173, 49, 0.6);
   border: 1px solid var(--ts);
   font-family: var(--ubun);
   font-weight: bold;
@@ -668,6 +668,10 @@ html body {
 .fancy h2 {
   font-family: var(--ov);
   font-size: 2.4rem;
+}
+
+#sz-mb .fancy h2, #sz-tb .fancy h2 {
+  font-size: 1.2rem;
 }
 
 .sec7 {

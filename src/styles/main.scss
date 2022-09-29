@@ -62,7 +62,7 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
  background-color: $bgcol;
  color: $texcol;
  border-radius: $rad;
- box-shadow: 0 0.5px 8px 0 #FFAD3199;
+ box-shadow: 0 0.5px 5px 0 #FFAD3199;
  border: 1px solid var(--ts);
  &:hover{
   background-color: var(--ts);
@@ -188,6 +188,7 @@ html{
  html{
   width: var(--st-w);
   min-height: var(--mx-h);
+  //font-size: 15.04px;
  }
 }
 
@@ -680,7 +681,9 @@ overflow: visible;
   font-size: 2.4rem;
  }
 }
-
+#sz-mb .fancy,#sz-tb .fancy{
+ h2{ font-size: 1.2rem;}
+}
 .sec7{
  height: 37.74rem;
  @include grid-df(repeat(4,1fr),repeat(7,1fr),1rem);
