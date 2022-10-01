@@ -10,7 +10,7 @@ const dqA=(x)=> document.querySelectorAll(x)
 const html=dq("html")
 const body= dq('body')
 const bodyDiv= dq(".body-wrap")
-let bodyWidth=window.innerWidth
+//let bodyWidth=window.innerWidth
 
 function interval(f,time){
 const interval= setInterval(f,time)
@@ -30,6 +30,7 @@ const hamburger= dq(".bar")
  timeOut(mediaSize,100)
 
 function mediaSize(){
+ let bodyWidth=window.innerWidth // local
  
  if(bodyWidth <=568) {
   bodyDiv.setAttribute("id","sz-mb")
@@ -60,6 +61,7 @@ function toggleHam(){
 
 }
 
+ //window.onresize= mediaSize
 
 event(window,"load",()=>{
  event(window,"resize",mediaSize)
