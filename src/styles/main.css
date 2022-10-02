@@ -5,7 +5,7 @@
 @font-face {
   font-family: "tech";
   src: url("/assets/fonts/Technology.ttf");
-}
+}/*
 @font-face {
   font-family: "Ubuntu";
   src: url("/assets/fonts/Ubuntu-Regular.ttf");
@@ -13,7 +13,7 @@
 @font-face {
   font-family: "Open Sans";
   src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
-}
+}*/
 * {
   box-sizing: border-box;
   font-family: var(--opn-sn);
@@ -895,7 +895,7 @@ html body {
   font-family: var(--tech);
 }
 
-/* testing
+/* testing*/
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
@@ -903,6 +903,6 @@ html body {
 .load-hide{
  display: none;
 }
-*/
+
 
 /*# sourceMappingURL=main.css.map */
