@@ -58,7 +58,7 @@ function mode(){
   if(e.target.classList.contains("fa-moon")){
 e.target.classList.remove("fa-moon")
    e.target.classList.add("fa-sun")
-   html.style="background-color: #fff;"
+   //html.style="background-color: #fff;"
   }
   else{
   e.target.classList.remove("fa-sun")
