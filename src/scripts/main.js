@@ -58,6 +58,7 @@ function mode(){
   if(e.target.classList.contains("fa-moon")){
 e.target.classList.remove("fa-moon")
    e.target.classList.add("fa-sun")
+   html.style="background-color: #fff;"
   }
   else{
   e.target.classList.remove("fa-sun")
@@ -161,7 +162,7 @@ function project(){
   const short= allData.projectData
   
   let projectDisplay= short.map((data)=>{
-   return (`<div class="flex-row"><section><img src=${data.img}></section><article class="flex-col"><h3>${data.h3}</h3><p><a href=${data.link}>${data.p}</a></p></arricle></div>`)
+   return (`<a class="flex-row" href=${data.link} target="_self"><section><img src=${data.img}></section><article class="flex-col"><h3>${data.h3}</h3><p>${data.p}</p></article></a>`)
   }).join("")
   
   pj_show.innerHTML= projectDisplay
