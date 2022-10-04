@@ -13,8 +13,8 @@ const dqA=(x)=> document.querySelectorAll(x)
 const html=dq("html")
 const body= dq('body')
 const bodyDiv= dq(".body-wrap")
-const bodyWidth=window.innerWidth
 
+let bodyWidth=window.innerWidth
 
 
 function interval(f,time){
@@ -58,7 +58,7 @@ function mode(){
   if(e.target.classList.contains("fa-moon")){
 e.target.classList.remove("fa-moon")
    e.target.classList.add("fa-sun")
-   //html.style="background-color: #fff;"
+   html.style="background-color: #fff;"
   }
   else{
   e.target.classList.remove("fa-sun")
@@ -285,8 +285,10 @@ function lang(){
 }
 
 function codeWrite(){
- let code=dq(".ab-code .value")
- let blink= dq(".ab-code .blink")
+ const code=dq(".ab-code .value")
+ const blink= dq(".ab-code .blink")
+ let age= dq(".age")
+ let ageNum= 6e8;
  const short= allData.aboutmeData
  let text= short.pop()
  let speed= 150
@@ -295,7 +297,8 @@ function codeWrite(){
  interval(()=>{
   code.textContent+= text.charAt(i)
   i++
-  
+  age.textContent=ageNum
+  ageNum++
    i%2==0?blink.classList.remove("blink"):blink.classList.add("blink")
    if(i>=text.length){
     timeOut(()=>{
@@ -307,6 +310,7 @@ function codeWrite(){
      i=-1
     },4000)
    }
+   
  },speed)
 }
 

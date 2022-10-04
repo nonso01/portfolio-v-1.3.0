@@ -11,6 +11,8 @@ const html=dq("html")
 const body= dq('body')
 const bodyDiv= dq(".body-wrap")
 //let bodyWidth=window.innerWidth
+const szMb =590
+const szTb=890
 
 function interval(f,time){
 const interval= setInterval(f,time)
@@ -32,19 +34,22 @@ const hamburger= dq(".bar")
 function mediaSize(){
  let bodyWidth=window.innerWidth // local
  
- if(bodyWidth <=568) {
-  bodyDiv.setAttribute("id","sz-mb")
+ if(bodyWidth <=szMb) {
+  bodyDiv.id="sz-mb"
   hamburger.classList.remove("hide")
   cancelHam.classList.remove("hide") 
  }
  
- else if(bodyWidth>=600 && bodyWidth<=960) {
-  bodyDiv.setAttribute('id',"sz-tb")
+ else if(bodyWidth>=600 && bodyWidth<=szTb) {
+ bodyDiv.id="sz-tb"
    hamburger.classList.remove("hide")
-   cancelHam.classList.remove("hide") 
+   cancelHam.classList.remove("hide")
  }
  
-else bodyDiv.setAttribute("id","sz-dk")
+else {
+ bodyDiv.id="sz-dk"
+ cancelHam.classList.add("hide")
+}
 
 csl(bodyWidth)
 }
@@ -61,7 +66,6 @@ function toggleHam(){
 
 }
 
- //window.onresize= mediaSize
 
 event(window,"load",()=>{
  event(window,"resize",mediaSize)
