@@ -143,7 +143,6 @@ html {
   font-size: var(--fts);
   background-color: var(--bg_1);
   scroll-behavior: smooth;
-  aspect-ratio: 0.48;
 }
 html body {
   min-height: inherit;
@@ -207,11 +206,27 @@ html body {
   background: var(--ts);
   border: 1px solid var(--ts);
   text-align: var(--cn);
+  position: relative;
+  overflow: visible;
+}
+.hd__nv button:hover .desc {
+  display: inline !important;
 }
 .hd__nv button a {
   display: inline-block;
   width: auto;
   height: auto;
+}
+.hd__nv button .desc {
+  position: absolute;
+  width: min-content;
+  height: min-content;
+  left: 60%;
+  padding: 5%;
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: calc(var(--rad) / 2.5);
+  font-family: var(--ov);
+  font-size: 0.79rem;
 }
 .hd__intro {
   grid-row: 3/7;
@@ -220,7 +235,7 @@ html body {
   padding: 1%;
 }
 .hd__intro p, .hd__intro h1 {
-  line-height: 1.4;
+  line-height: 1.3;
 }
 .hd__intro form {
   height: 18%;
@@ -263,6 +278,7 @@ html body {
 
 .sm-btn {
   width: 50%;
+  align-self: var(--cn);
 }
 .sm-btn i {
   height: 2.52rem;
@@ -895,7 +911,7 @@ html body {
   font-family: var(--tech);
 }
 
-/* testing*/
+/* testing
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
@@ -903,6 +919,6 @@ html body {
 .load-hide{
  display: none;
 }
-
+*/
 
 /*# sourceMappingURL=main.css.map */

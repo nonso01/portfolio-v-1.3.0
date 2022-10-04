@@ -18,19 +18,20 @@ $bd: 1px solid $col_tx_3;
 $gtr: grid-template-rows;
 $gtc: grid-template-columns;
 $tech: "tech";
-$ubun: "ubuntu";
-$opn-sn: "openSans";
+$ubun: "Ubuntu";
+$opn-sn: "Open Sans";
 $ft-sz: 15.899px;
 $rad: 0.629rem;
 $cn: center;
 $im: !important;
 $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
 
-@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Overpass&family=Ubuntu&display=swap');
+
 @import url("/src/styles/media.css");
 @import url("/src/styles/animate.css");
 
-//extra fonts
+
 @font-face {
  font-family: $tech;
  src: url("/assets/fonts/Technology.ttf");
@@ -177,6 +178,7 @@ html{
  font-size: var(--fts);
  background-color: var(--bg_1);
  scroll-behavior: smooth;
+ //aspect-ratio: 0.48;
  body{
   min-height: inherit;
   padding: 1%;
@@ -184,11 +186,10 @@ html{
  }
 }
 
-@media (max-width: 380px){
+@media (max-width: 400px){
  html{
   width: var(--st-w);
   min-height: var(--mx-h);
-  //font-size: 15.04px;
  }
 }
 
@@ -239,10 +240,26 @@ html{
     background: var(--ts);
     border: 1px solid var(--ts);
     text-align: var(--cn);
+    position: relative;
+    overflow: visible;
+    &:hover .desc{
+     display: inline !important;
+    }
     a{
      display: inline-block;
      width: auto;
      height: auto;
+    }
+    .desc{
+     position: absolute;
+     width: min-content;
+     height: min-content;
+     left: 60%;
+     padding: 5%;
+     background-color: rgba(40,40,40,0.3);
+     border-radius: calc(var(--rad)/2.5);
+     font-family: var(--ov);
+     font-size: 0.79rem;
     }
    }
  }
@@ -253,7 +270,7 @@ html{
   text-align: var(--cn);
   padding: 1%;
   p,h1{
-   line-height: 1.4;
+   line-height: 1.3;
   }
   form{
    height: 18%;
@@ -295,7 +312,8 @@ html{
  }
   .sm-btn{
    width: 50%;
-  i{ //add bg to all btn
+   align-self: var(--cn);
+  i{ 
    height: 2.52rem;
    width: 2.52rem;
    border-radius: calc(var(--st-w)/2);
@@ -355,7 +373,7 @@ html{
   color: var(--tx_4);
  }
  p{
-  font-size: 1.2rem;
+  font-size: 1.09rem;
   font-weight: 500;
  }
  button{
@@ -449,7 +467,7 @@ figure{
   grid-row: 1/4;
   grid-column: 5/8; 
   overflow: visible;
-  div{
+  a{
    height: 20%;
    width: 70%;
    background-color: rgba(40,40,40,0.5);
@@ -463,9 +481,6 @@ figure{
    h3{
     color: var(--tx_4);
    }
-   a{
-    color: var(--tx_2);
-   }
    section{
    height: 90%;
    width: 14%;
@@ -474,10 +489,10 @@ figure{
    overflow: hidden;
    }
   }
-  div:first-of-type{
+  a:first-of-type{
    transform:  translate(15%);
   }
-  div:last-of-type{
+  a:last-of-type{
    transform:  translate(15%);
   }
  }
@@ -889,7 +904,7 @@ overflow: visible;
   font-family: var(--tech);
  }
 }
-/* testing*/
+/* testing
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
@@ -897,3 +912,4 @@ overflow: visible;
 .load-hide{
  display: none;
 }
+*/

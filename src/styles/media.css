@@ -13,10 +13,12 @@
 #sz-mb .hd__tm div.trans, #sz-tb .hd__tm div.trans {
   transform: none;
   border: none;
+  width: 70%;
+  margin: auto;
 }
 #sz-mb .hd__nv, #sz-tb .hd__nv {
   flex: 0.1 1 auto;
-  width: 15%;
+  width: calc(var(--sz-100) / 2);
   align-self: flex-end;
   position: relative;
 }
@@ -98,9 +100,6 @@
   width: 80%;
   margin: var(--rad);
 }
-#sz-mb .sec1 .sm-btn, #sz-tb .sec1 .sm-btn {
-  align-self: var(--cn);
-}
 
 #sz-mb .sec2, #sz-tb .sec2 {
   height: calc(var(--sz-100) * 4.5);
@@ -165,7 +164,8 @@
   clip-path: polygon(40% 0, 60% 0, 60% 20%, 100% 100%, 0 100%, 40% 20%);
 }
 #sz-mb .sec4 .pj-sh a article, #sz-tb .sec4 .pj-sh a article {
-  height: 60%; text-align: var(--cn);
+  height: 60%;
+  text-align: var(--cn);
 }
 
 #sz-mb .sec5 .ts-card, #sz-tb .sec5 .ts-card {
@@ -211,8 +211,17 @@
 #sz-mb #about .abOne, #sz-tb #about .abOne {
   height: 35%;
 }
+#sz-mb #about .abOne h2, #sz-tb #about .abOne h2 {
+  font-size: 1.2rem;
+}
+#sz-mb #about .abOne li, #sz-tb #about .abOne li {
+  font-size: 0.79rem;
+}
 #sz-mb #about .abTwo, #sz-tb #about .abTwo {
   height: 45%;
+}
+#sz-mb #about .abTwo .value, #sz-tb #about .abTwo .value {
+  font-size: 0.79rem;
 }
 
 #sz-mb #contact, #sz-tb #contact {
