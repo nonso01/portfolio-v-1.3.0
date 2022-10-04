@@ -73,6 +73,10 @@
 #sz-mb .hd__intro, #sz-tb .hd__intro {
   flex: 0.5 1 auto;
 }
+
+#sz-mb .hd__intro h1{
+ height: 192px;
+}
 #sz-mb .hd__intro form, #sz-tb .hd__intro form {
   width: 100%;
   background-color: var(--ts);
