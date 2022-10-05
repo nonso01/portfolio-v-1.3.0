@@ -73,10 +73,6 @@
 #sz-mb .hd__intro, #sz-tb .hd__intro {
   flex: 0.5 1 auto;
 }
-
-#sz-mb .hd__intro h1{
- height: 192px;
-}
 #sz-mb .hd__intro form, #sz-tb .hd__intro form {
   width: 100%;
   background-color: var(--ts);
@@ -127,6 +123,10 @@
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
+}
+#sz-mb .sec3 .mn-card {
+  width: calc(var(--st-w) - var(--fts));
+  place-self: var(--cn);
 }
 
 #sz-tb .sec3 {
@@ -195,11 +195,6 @@
 }
 #sz-mb .sec6 div, #sz-tb .sec6 div {
   flex: 0.5 1 auto;
-}
-#sz-mb .sec6 div .lang-card, #sz-tb .sec6 div .lang-card {
-  transform: none;
-  width: 90%;
-  margin: calc(var(--rad) / 2);
 }
 
 #sz-mb #about, #sz-tb #about {

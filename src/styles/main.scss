@@ -1,6 +1,5 @@
-            /*---------Happy Coding don't delete everything this time  :-(--------------*/
+            /*---------Happy Coding don't delete everything this time  --------------*/
             
-
 $col_bg_1: rgba(40,40,40,1); 
 $col_bg_2: rgba(25,25,25,1);
 $col_tx_1: cornsilk;
@@ -173,7 +172,7 @@ input,textarea{
 
 /* desktop first approach, will be refactoring from time to time*/
 html{
-  width: var(--st-w);
+  width: var(--mx-w);
  min-height: var(--mx-h);
  font-size: var(--fts);
  background-color: var(--bg_1);
@@ -612,56 +611,35 @@ i{
   z-index: 5;
   grid-row: 1/5;
   grid-column: 1/5;
-    padding: 1%;
+ padding: 1%;
 overflow: visible;
- }
- .lang-card:nth-child(1),.lang-card:nth-child(4){
-  transform: translate(15%);
- }
- .lang-card{
-  width: 80%;
-  height: 20%;
-  border-radius: var(--rad);
-  background: rgba(40,40,40,0.5);
-  div{
-   width: 70%;
-   height: 75%;
-  span{
-   width: 85%;
-   height: auto;
-   background: var(--bg_2);
-   border-radius: calc(var(--rad)/1.5);
-   overflow: hidden;
-  }
-  i{
-   color: var(--tx_3);
-   font-family: var(--tech);
-   font-size: 1.2rem;
-   text-align: end;
-   display: inline-block;
-     border-radius: inherit;
-  }
-  }
-  img{
-   border-radius: calc(var(--rad)/2);
+
+@include grid-df(repeat(4,1fr),1fr 1fr , var(--rad));
+
+&__card{
+ width: auto;
+ height: auto;
+ place-self: var(--cn);
+ img{
+  width: 5.0317rem;
+  height: 5.0317rem;
+  &:hover{
+   transform: scale(0.8);
+   & + span {color: var(--tx_5);}
   }
  }
- .html,.css,.js,.bash{
-    height: 100%;
-  background-color: var(--tx_4);
+ span{
+  margin: calc(var(--rad)/1.5);
+  height: min-content;
+  align-self: var(--cn);
+  font-family: var(--tech);
+  font-size: 2vw;
+  color: var(--tx_3);
  }
- .html{
-  width: 90.10%;
+  }
+  
  }
- .css{
-  width: 92.45%;
- }
- .js{
-  width: 50.06%;
- }
- .bash{
-  width: 19.77%;
- }
+
  .lang-tl{
   z-index: 5;
   grid-row: 2/4;
@@ -830,7 +808,7 @@ overflow: visible;
  }
  
  div{
-  background: var(--ts) url("/assets/icons/blob-1.svg") no-repeat border-box 75% 10%/65%;
+  background: var(--ts) url("/assets/icons/video-calling.png") no-repeat border-box center/80% 80%;
  }
  
 }
