@@ -384,7 +384,7 @@ event(window,"load",()=>{
   footItem()
   updatePeople()
   mode()
-//mailMe()
+ mailMe()
 normalize()
  timeOut(()=>{
   body.classList.remove("load")
