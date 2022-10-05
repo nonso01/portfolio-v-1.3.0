@@ -140,22 +140,42 @@
   {
   img: "/assets/icons/html-5-logo-svgrepo-com.svg",
   cls: "html",
-  percent: "90.10%"
+  p: "90.10%"
   },
   {
    img: "/assets/icons/css3-logo-svgrepo-com.svg",
   cls: "css",
-  percent: "92.45%"
+  p: "92.45%"
   },
   {
    img: "/assets/icons/javascript-logo-svgrepo-com.svg",
     cls: "js",
-    percent: "50.06%"
+    p: "50.06%"
   },
   {
    img: "/assets/icons/bash.png",
     cls: "bash",
-    percent: "19.77%"
+    p: "19.77%"
+  },
+  {
+   img: "/assets/icons/nodejs.png",
+   cls: "node",
+   p: "9.5%"
+  },
+  {
+   img: "/assets/icons/sass.jpg",
+   cls: "sass",
+   p: "60%"
+  },
+  {
+  img: "/assets/icons/typescript.png",
+   cls: "ts",
+   p: "0.5%",
+  },
+  {
+   img: "/assets/icons/server.png",
+   cls: "mongodb",
+   p: "0%"
   }],
   aboutmeData:[
    "I am a junior Web developer and junior system administrator, with over 2+ years of experience in the field of Web development, i recently joined the freelance community so as to showcase some of my potential(s), by rendering numerous services, by building amazing products and pages and by collaborating with amazing people. i hope i will get the chance to Work with you  stay safe and HAPPY CODING 🧢  ~nonso martin~"

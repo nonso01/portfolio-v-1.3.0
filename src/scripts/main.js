@@ -279,7 +279,7 @@ function lang(){
  const short= allData.languageData
  
  let langDisplay= short.map(data=>{
-  return (`<div class="lang-card flex-row"><div class="flex-col"><i>${data.percent}</i><span class="lang-rate"><i class=${data.cls}></i></span></div><img src=${data.img} width="70px" height="70px"></div>`)
+  return (`<div class="lang__card ${data.cls} flex-row"><img src=${data.img} class="trans"><span>${data.p}</span></div>`)
  }).join("")
  div.innerHTML=langDisplay
 }
@@ -322,10 +322,10 @@ function mailMe(){
   event.preventDefault()
  emailjs.sendForm('service_xs39jlk', 'contact_form', this)
  .then(function() {
- //csl.log('SUCCESS!');
+ csl('SUCCESS!');
  alert('message sent successfully ✌️')
  }, function(error) {
-  // csl(" an error occured")
+   csl(" an error occured")
    })
  });
   }
@@ -358,13 +358,15 @@ function normalize(){
  
  dqA(".btn").forEach(e=>{
   e.classList.add("trans")
- })
- dqA("[type=submit]").forEach(e=>{
-  event(e,"submit",()=>{
-   e.preventDefault()
   })
- })
-}
+  
+  dqA("[type=submit]").forEach(e => {
+   event(e, "submit", () => {
+    e.preventDefault()
+   })
+  })
+ 
+ }
 
 
 //once fully loaded
@@ -382,7 +384,7 @@ event(window,"load",()=>{
   footItem()
   updatePeople()
   mode()
-mailMe()
+//mailMe()
 normalize()
  timeOut(()=>{
   body.classList.remove("load")
