@@ -70,15 +70,6 @@ window.addEventListener("load",()=>{
  
  
 // let h= dq(".css")
-let a={
- targets: [".html",".css",".js",".bash"],
- width: ["0%","20%","40%","60%","80%","92.45%"],
- duration: 5000,
- loop: true,
- easing: "easeOutCubic"
- 
-}
-anime(a) 
 })
 
 //let test=ft.getBoundingClientRect()
