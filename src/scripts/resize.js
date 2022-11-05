@@ -29,7 +29,7 @@ function event(e,t,f){
 const hamburger= dq(".bar")
  const cancelHam= dq(".cancel")
  
- timeOut(mediaSize,100)
+ mediaSize()
 
 function mediaSize(){
  let bodyWidth=window.innerWidth // local
@@ -57,11 +57,11 @@ csl(bodyWidth)
 function toggleHam(){
  const headerBtn= dq(".hd__btn")
  
- event(hamburger,"click",()=>{
-  headerBtn.classList.add("show")
+  event(hamburger,"click",()=>{
+ headerBtn.classList.toggle("show")
  })
  event(cancelHam,"click",()=>{
-  headerBtn.classList.contains("show")?headerBtn.classList.remove("show"):0
+  headerBtn.classList.toggle("show")
  })
 
 }

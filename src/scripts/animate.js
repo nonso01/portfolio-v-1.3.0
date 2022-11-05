@@ -13,6 +13,9 @@ const body= dq('body')
 function interval(f,time){
  let timer= setInterval(f,time)
 }
+function event(e,t,f){
+ const event= e.addEventListener(t,f)
+}
 
 function myCanvas(){
  const canvas= di("cnv")
@@ -64,17 +67,18 @@ for(let i=0; i<numOfRect;i++){
  animate()
 }
 
+function scrollAnime(){
+  csl(window.pageYOffset)
 
-window.addEventListener("load",()=>{
- myCanvas()
+}
+
+
+ event(window,"load",()=>{
+   myCanvas()
+   
+ })
  
- 
-// let h= dq(".css")
-})
+ event(window,"scroll",scrollAnime)
 
 //let test=ft.getBoundingClientRect()
-window.addEventListener("scroll",()=>{
  
- //csl(window.pageYOffset)
-})
-

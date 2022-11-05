@@ -31,6 +31,7 @@
   }
   ],
  majorCardData_1: [
+  //mainCard branch
    {
     img: "/assets/images/webDev.jpeg",
     price: "$100",

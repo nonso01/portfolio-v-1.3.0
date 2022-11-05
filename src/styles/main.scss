@@ -156,7 +156,7 @@ $trans: all 0.2s cubic-bezier(0.5,0.2,0,0.8);
 }
 
 h1,h2,h3,h4,h5,h6{
- font-family: var(--ubun);
+ font-family: var(--ov);
 }
 a{
  text-decoration: none;
@@ -397,6 +397,7 @@ font-weight: bold;
  @include grid-df(1fr 1fr,repeat(3,1fr), calc(var(--fts)*2));
  border-radius: var(--rad);
  
+ //=====>> work on maincard branch
  .mn-card{
   background-color: var(--bg_2);
   padding: 1%;
@@ -434,7 +435,7 @@ figure{
 }
 }
 
-
+//=====>>>
 .br{
  height: 9.435rem;
  button{

@@ -119,7 +119,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--ubun);
+  font-family: var(--ov);
 }
 
 a {
@@ -891,7 +891,7 @@ html body {
   font-family: var(--tech);
 }
 
-/* testing*/
+/* testing
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
@@ -899,6 +899,6 @@ html body {
 .load-hide{
  display: none;
 }
-
+*/
 
 /*# sourceMappingURL=main.css.map */
