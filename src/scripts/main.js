@@ -33,8 +33,14 @@ function rmEvent(e,t,f){
  const remove= e.removeEventListener(t,f)
 }
 
-function timing(){
- const date= new Date()
+export default function WEB(){}
+
+WEB.prototype.do= function(){
+  return "hello"
+}
+
+WEB.prototype.timing= function(){
+  const date= new Date()
 
  const [hour,min,sec,blink,milli,ftDay]=[dq('.hr'),dq('.mn'),dq('.sec'),dqA('.dim'),dq('.mm'),dq(".ft-dt")]
  
@@ -49,11 +55,11 @@ function timing(){
  blink.forEach((el)=>{
   sec.innerText%2==0?el.classList.add("blink"):el.classList.remove("blink")
  })
+ requestAnimationFrame(WEB.prototype.timing)
 }
 
-function mode(){
- 
- event(dq(".fa-moon"),"click",(e)=>{
+WEB.prototype.mode= function(){
+  event(dq(".fa-moon"),"click",(e)=>{
   e.preventDefault()
   if(e.target.classList.contains("fa-moon")){
 e.target.classList.remove("fa-moon")
@@ -67,8 +73,8 @@ e.target.classList.remove("fa-moon")
  })
 }
 
-function intro(){
- const introduce= dq('.hd__title')
+WEB.prototype.intro= function(){
+  const introduce= dq('.hd__title')
  const short= allData.introText
  introduce.textContent=short[0]
  
@@ -78,7 +84,7 @@ function intro(){
  },2500)
 }
 
-function quote(){
+WEB.prototype.quote= function(){
   const short= allData.quoteText
   const shuffle= dq('.sm-quote')
   let index=short.length-1
@@ -102,8 +108,8 @@ shuffle.textContent=short[index]
  shuffle.textContent=short[index]
 }
 
-function smallCard(){
- const cardDiv= dq('.sm-card')
+WEB.prototype.smallCard= function(){
+  const cardDiv= dq('.sm-card')
  
  let smallCardDisplay= allData.smallCardData.map((data)=>{
   return (`<div class="sm-cd flex-col trans"><img src=${data.img} width="40px" height="40px"><h3>${data.h3}</h3><p>${data.p}.</p></div>`)
@@ -111,9 +117,8 @@ function smallCard(){
  cardDiv.innerHTML= smallCardDisplay
 }
 
-function allModal(){
-
- const clOn= dq(".cl_one_op")
+WEB.prototype.allModal= function(){
+  const clOn= dq(".cl_one_op")
   const clOff= dq(".cl_two_clo")
   const M= dq(".M")
 
@@ -138,8 +143,23 @@ function allModal(){
      M.classList.remove("modal")
     })
 }
-
-function mainCard(){
+            // main card
+WEB.prototype.blogPost= function(){
+const section= dq(".sec3")
+ const short= allData.majorCardData_1
+ let src= "src='/assets/icons/star.svg' width='15px' height=15px class='star'"
+ 
+ 
+ short.forEach((data)=>{
+  data.star=(`<img ${src}><img ${src}><img ${src}><img ${src}><img ${src}>`)
+  data.fee= "project fee"
+ })
+ let cardDisplay= short.map((data)=>{
+  return (`<div class="mn-card trans"><div class="card-img"><img src=${data.img}></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
+ }).join("")
+ section.innerHTML= cardDisplay  
+}
+/*function mainCard(){
  const section= dq(".sec3")
  const short= allData.majorCardData_1
  let src= "src='/assets/icons/star.svg' width='15px' height=15px class='star'"
@@ -153,7 +173,7 @@ function mainCard(){
   return (`<div class="mn-card trans"><div class="card-img"><img src=${data.img}></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
  }).join("")
  section.innerHTML= cardDisplay;
-}
+}*/
  
 function updateCard(){ }
  
@@ -371,19 +391,19 @@ function normalize(){
 
 //once fully loaded
 event(window,"load",()=>{
- interval(timing, 900)
-  intro()
-  quote()
-  smallCard()
-  allModal()
-  mainCard() 
+ //interval(timing, 900)
+//  intro()
+ // quote()
+ // smallCard()
+  //allModal()
+//  mainCard() 
   project()
   people()
   lang()
   codeWrite()
   footItem()
   updatePeople()
-  mode()
+ // mode()
 mailMe()
 normalize()
  timeOut(()=>{
@@ -393,3 +413,9 @@ normalize()
 })
 
 //body.style.transform="scale(0.4)"
+
+
+const method= WEB.prototype
+for(let prop in method){
+  method[prop]()
+}
