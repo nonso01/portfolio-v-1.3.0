@@ -147,18 +147,7 @@ WEB.prototype.allModal= function(){
             // main card
 WEB.prototype.blogPost= function(){
 const section= dq(".sec3")
- const short= allData.majorCardData_1
- let src= "src='/assets/icons/star.svg' width='15px' height=15px class='star'"
  
- 
- short.forEach((data)=>{
-  data.star=(`<img ${src}><img ${src}><img ${src}><img ${src}><img ${src}>`)
-  data.fee= "project fee"
- })
- let cardDisplay= short.map((data)=>{
-  return (`<div class="mn-card trans"><div class="card-img"><img src=${data.img}></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
- }).join("")
- section.innerHTML= cardDisplay  
 }
 
 WEB.prototype.updateCard= function(){

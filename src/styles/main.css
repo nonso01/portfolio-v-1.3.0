@@ -6,14 +6,6 @@
   font-family: "tech";
   src: url("/assets/fonts/Technology.ttf");
 }
-/*@font-face {
-  font-family: "Ubuntu";
-  src: url("/assets/fonts/Ubuntu-Regular.ttf");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
-}*/
 * {
   box-sizing: border-box;
   font-family: var(--opn-sn);
@@ -138,7 +130,7 @@ input, textarea {
 
 /* desktop first approach, will be refactoring from time to time*/
 html {
-  width: var(--st-w);
+  width: var(--mx-w);
   min-height: var(--mx-h);
   font-size: var(--fts);
   background-color: var(--bg_1);
@@ -373,48 +365,6 @@ html body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: calc(var(--fts) * 2);
   border-radius: var(--rad);
-}
-.sec3 .mn-card {
-  background-color: var(--bg_2);
-  padding: 1%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-content: var(--cn);
-  border-radius: var(--rad);
-}
-.sec3 .card-img {
-  height: 55%;
-  width: 100%;
-  overflow: hidden;
-  border-radius: calc(var(--rad) / 2);
-}
-.sec3 .card-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-}
-.sec3 .card-pr, .sec3 .card-rv {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: var(--cn);
-}
-.sec3 .card-pr span, .sec3 .card-rv span {
-  color: var(--tx_4);
-  font-family: var(--ubun);
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-.sec3 .card-pr s, .sec3 .card-pr i, .sec3 .card-rv s, .sec3 .card-rv i {
-  color: var(--tx_2);
-  font-size: 0.9rem;
-}
-.sec3 figure {
-  opacity: 0.7;
-}
-.sec3 figure .star {
-  margin: 2px;
 }
 
 .br {
@@ -891,7 +841,7 @@ html body {
   font-family: var(--tech);
 }
 
-/* testing*/
+/* testing
 
 .load{
  background: #fff url("/assets/images/cloud-network.gif") no-repeat border-box center/50%;
@@ -899,6 +849,6 @@ html body {
 .load-hide{
  display: none;
 }
-
+*/
 
 /*# sourceMappingURL=main.css.map */

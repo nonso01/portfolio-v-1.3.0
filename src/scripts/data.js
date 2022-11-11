@@ -2,10 +2,11 @@
 
  const  allData= {
  introText: [
-  "Turn your dreams into an achievement while building with Us.",
-  "Collaborating with us means scaling your business to greater heights.",
-  "We don't just offer services, what we offer is trust and confidence ",
-  "What are you waiting for, jump in and sign up for more."
+  "Turn your dreams today into reality with a proficient developer ",
+  "Collaborating with me means scaling your business to greater heights.",
+  "I build and customize websites at each level of organization.",
+  "What are you waiting for? jump in let\'s connect and create.",
+  "Am also looking into working hands to hands with open source freaks."
   ],
  quoteText: [
   "The way i see it, if you want the rainbow you gota put up with the rain.",
@@ -30,50 +31,43 @@
    p:"Your payments are valued and are for the best of all."
   }
   ],
- majorCardData_1: [
-  //mainCard branch
-   {
-    img: "/assets/images/webDev.jpeg",
-    price: "$100",
-    cancel: "$162",
-    h3: "Desktop and Mobile Web development.",
-    review: "4.1k +"
-   },
-   {
-    img: "/assets/images/database.png",
-    price: "$255",
-    cancel: "$320",
-    h3: "Network architecture And data management.",
-    review: "3.9k +"
-   },
-   {
-    img: "/assets/images/design_2.jpg",
-     price: "$75",
-     cancel: "$110",
-     h3: "UX/UI designing providing beauty and simplicity",
-     review: "4.5k +"
-   },
-   {
-    img: "/assets/images/teacher.jpg",
-     price: "$100",
-     cancel: "$150",
-     h3: "Professional science tutorials and tutors.",
-     review: "4.0k +"
-   },
-   {
-    img: "/assets/images/Bg-unsplash.jpg",
-     price: "$180",
-     cancel: "$280",
-     h3: "Learn crypto and data mining while gaining",
-     review: "3.5k +"
-   },
-   {
-    img: "/assets/images/The-Role-of-Marketing-1_2.jpg",
-     price: "$200",
-     cancel: "$230",
-     h3: "Marketing and its affeliats boosting your business",
-     review: "3.5k +"
-   }
+ blogPostData: [
+  {
+    img: "",
+    link: "https://css-tricks.com/how-i-made-a-pure-css-puzzle-game",
+    title: "Pure css puzzle game",
+    word: ""
+  },
+  {
+    img: "",
+    link: "https://2ality.com/2022/09/nodejs-overview.html",
+    title: "An overview of Node.js",
+    word: ""
+  },
+  {
+    img: "",
+    link: "https://abdoamin.medium.com/35-javascript-interview-questions-answered-by-me-95158209a8c6",
+    title:"35 JavaScript questions",
+    word: ""
+  },
+  {
+    img: "",
+    link: "http://amp.gs/jGFiD",
+    title:"Creative list styling",
+    word: ""
+  },
+  {
+    img: "",
+    link: "https://medium.com/@olimpiuseulean/migrate-components-written-in-vue2-options-api-to-vue3-composition-api-471d50aab41",
+    title:"Vue API",
+    word: ""
+  },
+  {
+    img: "",
+    link: "https://www.smashingmagazine.com/2022/09/javascript-api-guide/",
+    title: "JavaScript API",
+    word: ""
+  }
    ],
  projectData: [
     {
