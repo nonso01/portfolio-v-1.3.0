@@ -33,11 +33,12 @@ function rmEvent(e,t,f){
  const remove= e.removeEventListener(t,f)
 }
 
+const TEN_SECONDS= 1e4
+
 export default function WEB(){}
 
-WEB.prototype.do= function(){
-  return "hello"
-}
+
+
 
 WEB.prototype.timing= function(){
   const date= new Date()
@@ -159,25 +160,12 @@ const section= dq(".sec3")
  }).join("")
  section.innerHTML= cardDisplay  
 }
-/*function mainCard(){
- const section= dq(".sec3")
- const short= allData.majorCardData_1
- let src= "src='/assets/icons/star.svg' width='15px' height=15px class='star'"
- 
- 
- short.forEach((data)=>{
-  data.star=(`<img ${src}><img ${src}><img ${src}><img ${src}><img ${src}>`)
-  data.fee= "project fee"
- })
- let cardDisplay= short.map((data)=>{
-  return (`<div class="mn-card trans"><div class="card-img"><img src=${data.img}></div><div class="card-pr"><span>${data.price}</span><s>${data.cancel}</s><i>${data.fee}</i></div><h3>${data.h3}</h3><div class="card-rv"><figure>${data.star}</figure><i>${data.review}</i></div></div>`)
- }).join("")
- section.innerHTML= cardDisplay;
-}*/
- 
-function updateCard(){ }
- 
-function project(){
+
+WEB.prototype.updateCard= function(){
+  
+  
+}
+WEB.prototype.project= function(){
   const [btn,pj_show]=[dq(".pj-btn"),dq(".pj-sh")]
   const short= allData.projectData
   
@@ -188,10 +176,8 @@ function project(){
   pj_show.innerHTML= projectDisplay
   
   //todo update projects 
- }
-
-function people(){
- 
+} 
+WEB.prototype.people=function(){
   (function() {
    const say = dq(".pl")
    const data=["Friends","Companions","Families","Sponsors","Co-workers","Boss"]
@@ -212,8 +198,8 @@ function people(){
  T.innerHTML=peopleDisplay
 }
 
-function updatePeople(){
- const T= dq(".ts-pl")
+WEB.prototype.updatePeople=function(){
+  const T= dq(".ts-pl")
  const light= dqA(".light i")
  const child=T.children
  let bulbNum= (light.length-1)
@@ -293,9 +279,8 @@ event(dq(".ts-right"),"click",tsRight)
  }
 
 }
-
-function lang(){
- const div= dq(".lang")
+WEB.prototype.lang= function(){
+  const div= dq(".lang")
  const short= allData.languageData
  
  let langDisplay= short.map(data=>{
@@ -304,8 +289,8 @@ function lang(){
  div.innerHTML=langDisplay
 }
 
-function codeWrite(){
- const code=dq(".ab-code .value")
+WEB.prototype.codeWrite=function(){
+  const code=dq(".ab-code .value")
  const blink= dq(".ab-code .blink")
  let age= dq(".age")
  let ageNum= 6e8;
@@ -334,8 +319,8 @@ function codeWrite(){
  },speed)
 }
 
-function mailMe(){
- emailjs.init("lwYvE8DyzBBCRoja3")
+/*WEB.prototype.mailMe=function(){
+  emailjs.init("lwYvE8DyzBBCRoja3")
  
  event(dq("#cnt-form"),"submit",function(event){
   
@@ -348,10 +333,10 @@ function mailMe(){
    csl(" an error occured")
    })
  });
-  }
+}*/
 
-function footItem(){
- const ftInfo= dq(".ft-info")
+WEB.prototype.footItem=function(){
+  const ftInfo= dq(".ft-info")
  const ftConnect= dq(".ft-con")
  const short= allData.footerData
    const M= dq(".M")
@@ -370,8 +355,8 @@ function footItem(){
    })
 }
 
-function normalize(){
- dqA("img")
+WEB.prototype.normalize=function(){
+  dqA("img")
  .forEach(e=>{
   e.alt="Martin\'s image"
  })
@@ -385,37 +370,22 @@ function normalize(){
     e.preventDefault()
    })
   })
- 
- }
+}
 
 
-//once fully loaded
-event(window,"load",()=>{
- //interval(timing, 900)
-//  intro()
- // quote()
- // smallCard()
-  //allModal()
-//  mainCard() 
-  project()
-  people()
-  lang()
-  codeWrite()
-  footItem()
-  updatePeople()
- // mode()
-mailMe()
-normalize()
- timeOut(()=>{
+
+
+  
+let LOAD=timeOut(()=>{
   body.classList.remove("load")
   bodyDiv.classList.remove("load-hide")
- },10000)
-})
+ },TEN_SECONDS)  
+
+
+for(let prop in WEB.prototype){
+  WEB.prototype[prop]()
+}
 
 //body.style.transform="scale(0.4)"
 
-
-const method= WEB.prototype
-for(let prop in method){
-  method[prop]()
-}
+csl(WEB)

@@ -11,8 +11,8 @@ const html=dq("html")
 const body= dq('body')
 const bodyDiv= dq(".body-wrap")
 //let bodyWidth=window.innerWidth
-const szMb =590
-const szTb=890
+const MB =590
+const TB=890
 
 function interval(f,time){
 const interval= setInterval(f,time)
@@ -34,14 +34,14 @@ const hamburger= dq(".bar")
 function mediaSize(){
  let bodyWidth=window.innerWidth // local
  
- if(bodyWidth <=szMb) {
-  bodyDiv.id="sz-mb"
+ if(bodyWidth <=MB){
+  bodyDiv.id="mb"
   hamburger.classList.remove("hide")
   cancelHam.classList.remove("hide") 
  }
  
- else if(bodyWidth>=600 && bodyWidth<=szTb) {
- bodyDiv.id="sz-tb"
+ else if(bodyWidth>=600 && bodyWidth<=TB) {
+ bodyDiv.id="tb"
    hamburger.classList.remove("hide")
    cancelHam.classList.remove("hide")
  }
