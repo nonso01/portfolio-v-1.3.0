@@ -6,7 +6,7 @@
   "Collaborating with me means scaling your business to greater heights.",
   "I build and customize websites at each level of organization.",
   "What are you waiting for? jump in let\'s connect and create.",
-  "Am also looking into working hands to hands with open source freaks."
+  "Currently looking for open source freaks to learn from."
   ],
  quoteText: [
   "The way i see it, if you want the rainbow you gota put up with the rain.",
