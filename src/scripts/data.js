@@ -1,6 +1,6 @@
 "use strict"
 
- const  allData= {
+ const  _data= {
  introText: [
   "Turn your dreams today into reality with a proficient developer ",
   "Collaborating with me means scaling your business to greater heights.",
@@ -199,4 +199,4 @@
   }],
 }
 
-export  {allData}
+export {_data}
