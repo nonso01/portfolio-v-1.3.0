@@ -12,7 +12,7 @@
     throw new TypeError("type error expecting an object {}.")
     }
     
-    if(data.element===undefined || data.elements===undefined){
+    if(data.element===undefined || !data.elements===undefined){
     throw new Error("please provide an element to get started.")
     }
 

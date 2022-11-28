@@ -33,13 +33,11 @@ const c=console
 
 let obj={
   element: "#app .s",
-  type: "scroll"
 }
 
 
-let i=0
-
 let a= new Anime(obj)
+
 .css({
   width: 300,
   display: "block",
@@ -48,4 +46,9 @@ let a= new Anime(obj)
     
     return "#455"
   }
+})
+
+.on("click",(e)=>{
+ 
+ alert("you've clicked me")
 })
