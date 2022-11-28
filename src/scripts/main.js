@@ -1,4 +1,4 @@
-'use strict'
+  'use strict'
 
 //import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import {_data} from "/src/scripts/data.js"
@@ -32,23 +32,20 @@ const c=console
 // play ground
 
 let obj={
-  element: "#app .s",
+  element: ".s",
+  type:"scroll"
 }
 
 
 let a= new Anime(obj)
 
 .css({
-  width: 300,
+  width: "50vw",
   display: "block",
   height: 200,
-  backgroundColor: function(){
-    
-    return "#455"
-  }
+  position: "absolute",
+  top: 100,
+  backgroundColor: "indianred",
+  borderRadius: 30
 })
-
-.on("click",(e)=>{
- 
- alert("you've clicked me")
-})
+.init()
