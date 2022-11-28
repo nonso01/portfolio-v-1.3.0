@@ -1,4 +1,6 @@
-import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+'use strict'
+
+//import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import {_data} from "/src/scripts/data.js"
 import {resize} from "/src/scripts/resize.js"
 
@@ -9,7 +11,7 @@ const c=console
  const dqA = x => document.querySelectorAll(x)
  
  
-const app= createApp({
+/*const app= createApp({
   
   data(){
     return {
@@ -24,18 +26,23 @@ const app= createApp({
   }
   
   
-}).mount("#app")
+}).mount("#app")*/
 
 
 // play ground
 
 let obj={
-  element: "#app button"
+  element: "#app .s",
+  type: "scroll"
 }
 
-let b= new Anime(obj,"scroll")
-.css({
-  color: "#454",
-  fontFamily: "monospace"
-})
 
+let i=0
+
+let a= new Anime(obj)
+.css({
+  width: "300px",
+  display: "block",
+  height: "100px",
+  backgroundColor: "#4b9"
+})

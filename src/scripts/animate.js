@@ -4,15 +4,27 @@
   
   
   class Anime{
-    constructor(data={},type){
-      this.element=dq(data.element)
-      this.id=this.element.id || null
-      this.attr=this.element.attributes||null
+    constructor(data={}){
+      this.element
+      this.nodeList
+      
+    if(typeof data!=="object"){
+    throw new TypeError("type error expecting an object {}.")
+    }
+    
+    if(data.element===undefined || !data.elements===undefined){
+    throw new Error("please provide an element to get started.")
+    }
+
+   else if(data.element){
+     this.element= dq(data.element)
+   }
+      
+      
+      this.attr=this.element.attributes
 
       this.parentElement=this.element.parentNode
       
-      
-      this.type=arguments[arguments.length-1]
       
       this.rect=this.element.getBoundingClientRect()
       
@@ -25,13 +37,22 @@
         top: this.rect.top,
       }
       
+      this.initScroll={
+        isScrolling: false,
+        offsetTop: 0,
+        offsetBottom: 0
+      }
+      
       
       this.keys= Object.keys(data).toString()
+      this.type= data.type
+      
       
     }
     
     
-    on(event,f){ // event
+    
+    on(event=new String,f=function(){}){ 
       let arg= arguments
       
       if(arg.length<2 || arg.length>2){
@@ -48,17 +69,23 @@
     }
     
     
-    
-    
     css(_style={}){
       for(let prop in _style){
+        if(_style[prop] instanceof Function){
+          this.element.style[prop]=_style[prop]()
+        }
+        
         this.element.style[prop]=_style[prop]
       }
       return this
       
     }
     
-    set add(value){
+  init(){
+    
+  }
+    
+    static _drop_down(toggle="show"){
       
     }
     
