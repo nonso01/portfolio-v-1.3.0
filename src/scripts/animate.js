@@ -12,7 +12,7 @@
     throw new TypeError("type error expecting an object {}.")
     }
     
-    if(data.element===undefined || !data.elements===undefined){
+    if(data.element===undefined || data.elements===undefined){
     throw new Error("please provide an element to get started.")
     }
 
@@ -75,10 +75,14 @@
           this.element.style[prop]=_style[prop]()
         }
         
+        if(typeof _style[prop]==="number"){
+          this.element.style[prop]=_style[prop]+"px"
+        }
+        
         this.element.style[prop]=_style[prop]
       }
-      return this
       
+      return this
     }
     
   init(){

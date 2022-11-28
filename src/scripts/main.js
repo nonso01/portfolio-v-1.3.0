@@ -41,8 +41,11 @@ let i=0
 
 let a= new Anime(obj)
 .css({
-  width: "300px",
+  width: 300,
   display: "block",
-  height: "100px",
-  backgroundColor: "#4b9"
+  height: 200,
+  backgroundColor: function(){
+    
+    return "#455"
+  }
 })
