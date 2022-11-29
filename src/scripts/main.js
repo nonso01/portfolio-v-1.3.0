@@ -33,7 +33,11 @@ const c=console
 
 let obj={
   element: ".s",
-  type:"scroll"
+  type:{
+    name: "scroll",
+    loop: 4,
+    random: 240
+  }
 }
 
 
@@ -45,7 +49,8 @@ let a= new Anime(obj)
   height: 200,
   position: "absolute",
   top: 100,
+  left: 240.56,
   backgroundColor: "indianred",
   borderRadius: 30
 })
-.init()
+.on('do', ()=> c.log("hi"))

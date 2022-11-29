@@ -18,13 +18,11 @@
     // drop obj key/value
     this.drag
     // drag obj ket/value
-    this._initialize 
+    this.start=false 
     // when initialized
       
-    //this.test= this.__proto__.constructor
-      
+    // Element data
     Anime.ATTRIBUTES= this.element.attributes
-    Anime.TYPE=data.type
     Anime.PARENTNODE=this.element.parentNode
     
     Anime.KEYS= Object.keys(data)
@@ -39,6 +37,13 @@
       b: Anime.RECT.bottom
     }
     
+    Anime.TYPE={
+      NAME: data.type.name || "reveal",
+      DELAY: data.type.delay || 0,
+      LOOP: data.type.loop || false,
+      RANDOM: Math.floor(Math.random()*data.type.random) || 0,
+      SPEED: data.type.speed || .05
+    }
     _warningAboutChanges()
   }
     
@@ -53,6 +58,7 @@
       if((typeof arg[0]!=="string") && (typeof arg[1]!=="function")){
         throw new TypeError
       }
+      
       
       const _ev=this.element.addEventListener(event,f)
       
@@ -75,15 +81,24 @@
     }
     
     init(){
-    this._initialize= true
-   c.log(Anime.TYPE)
-   }
+    this.start = false
+    c.log(Anime.TYPE)
+    }
     
     
   }
+ 
+export {Anime}
 
- 
- 
+/*
+type of animations
+- scroll X & Y
+- resize
+- drop-down
+- transformation
+- opacity and blur (revealing)
+*/
+
  function _checkElementWithinData(data){
    if(typeof data!=="object"){
     throw new TypeError("type error expecting an object {}.")
@@ -99,17 +114,6 @@
    return void 0
  }
 
- 
-export {Anime}
-
-/*
-type of animations
-- scroll X & Y
-- resize
-- drop-down
-- transformation
-- opacity and blur (revealing)
-*/
 function _warningAboutChanges(){
    c.warn("Anime is still under developement\n\t By Nonso Martin and xyz\n\v stay updated...")
  }
