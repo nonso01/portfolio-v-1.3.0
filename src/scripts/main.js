@@ -29,28 +29,3 @@ const c=console
 }).mount("#app")*/
 
 
-// play ground
-
-let obj={
-  element: ".s",
-  type:{
-    name: "scroll",
-    loop: 4,
-    random: 240
-  }
-}
-
-
-let a= new Anime(obj)
-
-.css({
-  width: "50vw",
-  display: "block",
-  height: 200,
-  position: "absolute",
-  top: 100,
-  left: 240.56,
-  backgroundColor: "indianred",
-  borderRadius: 30
-})
-.on('do', ()=> c.log("hi"))
