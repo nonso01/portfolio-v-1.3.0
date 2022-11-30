@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Rubik+Distressed&display=swap');
+
+@import url("/src/styles/animate.css");
+@import url("/src/styles/media.css");
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family: "Kanit";
+}
+
+:root{
+  --kanit: "Kanit",sans-serif;
+  --rubik: "Rubik Distressed", var(--kanit);
+  
+  
+}
