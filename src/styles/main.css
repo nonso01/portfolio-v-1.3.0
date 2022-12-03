@@ -26,3 +26,10 @@ textarea {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.s{
+  display: block;
+  width: 5ch;
+  height: 5ch;
+  border: 1px solid;
+}

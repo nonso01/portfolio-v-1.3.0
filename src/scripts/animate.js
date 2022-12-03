@@ -13,7 +13,8 @@ const c=console
  
  
  
-dq(".s").style=`display:block; width:200px; height: 200px; border:1px solid;`
+let s=dq(".s")
+
 
 let test=gsap.to(".s",{
   x: 100,
@@ -25,3 +26,7 @@ let test=gsap.to(".s",{
   
 })
 
+s.onclick=function(e){
+  test.pause()
+ 
+}
