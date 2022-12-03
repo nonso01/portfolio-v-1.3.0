@@ -10,6 +10,7 @@
   box-sizing: border-box;
   
   font-family: "Kanit";
+  
 }
 
 :root{
@@ -18,3 +19,15 @@
   
   
 }
+h1,
+h2,h3,
+h4,h5,h6,
+p,span,a,pre,
+code,attr,kbd,button, input,
+textarea{
+  font-kerning: none;
+  font-optical-sizing: auto;
+  font-size-adjust: ex-height;
+  font-variant-numeric: slashed-zero;
+}
+// let's reset some props

@@ -5,12 +5,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--kanit);
+  font-family: "Kanit";
 }
 
 :root {
   --kanit: "Kanit",sans-serif;
   --rubik: "Rubik Distressed", var(--kanit);
+}
+
+h1,
+h2, h3,
+h4, h5, h6,
+p, span, a, pre,
+code, attr, kbd, button, input,
+textarea {
+  font-kerning: none;
+  font-optical-sizing: auto;
+  font-size-adjust: ex-height;
+  font-variant-numeric: slashed-zero;
 }
 
 /*# sourceMappingURL=main.css.map */

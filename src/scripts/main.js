@@ -13,7 +13,7 @@ const app= createApp({
   
   data(){
     return {
-      hi: "Sorry Am just refactoring my ugly scripts, will be out in a month or two",
+      hi: "Hello,Am NONSO MARTIN",
       number: 0
     }
   },
