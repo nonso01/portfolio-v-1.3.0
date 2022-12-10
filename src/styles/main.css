@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Kanit";
+  font-family: var(--kanit);
 }
 
 :root {
@@ -31,5 +31,13 @@ textarea {
   display: block;
   width: 5ch;
   height: 5ch;
-  border: 1px solid;
+  background-color: hsla(161, 84%, 55%, 1)
+}
+
+h1{
+    background: green linear-gradient(45deg,black, #2AECAE);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
 }

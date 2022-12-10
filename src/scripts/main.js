@@ -5,24 +5,35 @@ import {createApp} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 
 const c=console
- const dq=x=> document.querySelector(x)
- const dqA=x=> document.querySelectorAll(x)
+
+ function dq(x) {
+   return document.querySelector(x)
+ }
+ 
+ function dqA(x) {
+   return document.querySelectorAll(x)
+ }
  
  
-const app= createApp({
-  
+const HEADER= createApp({
   data(){
+    
     return {
-      hi: "Hello,Am NONSO MARTIN",
-      number: 0
+      
     }
   },
-  methods: {
-    inc(){
-      return this.number++
-    }
-  }
-  
+ 
+ methods: {
+   
+ },
+ 
+ computed: {
+   
+ },
+ 
+ mounted(){
+   
+ }
   
 }).mount("#app")
 

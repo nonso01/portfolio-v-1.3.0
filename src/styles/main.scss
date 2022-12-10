@@ -8,17 +8,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
-  font-family: "Kanit";
-  
+  font-family: inherit;
 }
 
 :root{
   --kanit: "Kanit",sans-serif;
   --rubik: "Rubik Distressed", var(--kanit);
+  --default-fontSize: 15.5px;
   
+  --theme-primary: #30e8a8;
+  --theme-secondary: #23223a;
+  --theme-tertiary: ;
+  --ts: transparent;
+  
+  --max-width: 1440px;
+  --max-height: 100vmax;
+  --min-height: 100vmin;
+  --standard-height: 100vh;
+  --standard-width: 100%;
+  
+  --cn: center;
+  --aut: auto;
+  --line-height: calc(40 * 0.01ex);
+  --letter-space: 
   
 }
+
 h1,
 h2,h3,
 h4,h5,h6,
@@ -29,5 +44,17 @@ textarea,title{
   font-optical-sizing: auto;
   font-size-adjust: ex-height;
   font-variant-numeric: slashed-zero;
+  font-family: var(--kanit);
+  line-height: calc(60 * 0.001em);
+}
+
+img{
+  min-width: var(--standard-width);
+  min-height: var(--standard-width);
+  vertical-align: 50%;
+}
+a{
+  text-decoration-line: none;
+  color: var(--theme-primary);
 }
 // let's reset some props

@@ -8,25 +8,19 @@
 import {gsap} from "/node_modules/gsap/index.js"
 
 const c=console
- const dq = x => document.querySelector(x)
- const dqA = x => document.querySelectorAll(x)
  
+ const HEADER={
+   
+ }
  
- 
-let s=dq(".s")
+ const FOOTER={
+   
+ }
 
+function dq(x){
+  return document.querySelector(x)
+}
 
-let test=gsap.to(".s",{
-  x: 100,
-  ease: "elastic",
-  duration: 3,
-  delay: .5,
-  repeat: 10,
-  yoyo: true
-  
-})
-
-s.onclick=function(e){
-  test.pause()
- 
+function dqA(x){
+  return document.querySelectorAll(x)
 }
