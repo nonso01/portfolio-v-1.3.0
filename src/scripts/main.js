@@ -4,26 +4,37 @@ import {resize} from "/src/scripts/resize.js"
 import {createApp} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 
-const c=console
- const dq=x=> document.querySelector(x)
- const dqA=x=> document.querySelectorAll(x)
+const c = console
+
+ function dq(x) {
+   return document.querySelector(x)
+ }
+ 
+ function dqA(x) {
+   return document.querySelectorAll(x)
+ }
  
  
-const app= createApp({
-  
+const header = createApp({
   data(){
+    
     return {
-      hi: "Sorry Am just refactoring my ugly scripts, will be out in a month or two",
-      number: 0
+      nonso01: _data?.name?? "Nonso"
     }
   },
-  methods: {
-    inc(){
-      return this.number++
-    }
-  }
+ 
+ methods: {
+   
+ },
+ 
+ computed: {
+   
+ },
+ 
+ mounted(){
+   
+ }
   
-  
-}).mount("#app")
+}).mount(".hd")
 
 

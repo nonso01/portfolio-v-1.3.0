@@ -1,6 +1,8 @@
 "use strict"
 
  const  _data= {
+   name: "Martin.",
+   
  introText: [
   "Turn your dreams today into reality with a proficient developer ",
   "Collaborating with me means scaling your business to greater heights.",
@@ -8,6 +10,7 @@
   "What are you waiting for? jump in let\'s connect and create.",
   "Currently looking for open source freaks to learn from."
   ],
+  
  quoteText: [
   "The way i see it, if you want the rainbow you gota put up with the rain.",
   "Remember when you forgive you heal and when you let go you grow.",
@@ -16,6 +19,7 @@
   "Every decision for something is a decision against another.",
   "Everything has beauty but not everyone sees it."
   ],
+  
  smallCardData: [
   {
    img: "/assets/icons/extension_black_24dp.svg",
@@ -31,6 +35,7 @@
    p:"Your payments are valued and are for the best of all."
   }
   ],
+  
  blogPostData: [
   {
     img: "",
@@ -69,6 +74,7 @@
     word: ""
   }
    ],
+   
  projectData: [
     {
      img: "/assets/images/desktop-design_1.jpg",
@@ -95,6 +101,7 @@
      Link: "https://github.com/nonso01/"
     }
     ],
+    
  testimonialData:[
    {
     img: "/assets/icons/xxxx_1.png",
@@ -131,6 +138,7 @@
     word:"You might check out one of their products which was renderd to me some few weeks ago, there are just the Best.",
         cls:"hide"
   }],
+  
  languageData:[
   {
   img: "/assets/icons/html-5-logo-svgrepo-com.svg",
@@ -172,9 +180,11 @@
    cls: "mongodb",
    p: "0%"
   }],
+  
   aboutmeData:[
    "I am a junior Web developer and junior system administrator, with over 2+ years of experience in the field of Web development, i recently joined the freelance community so as to showcase some of my potential(s), by rendering numerous services, by building amazing products and pages and by collaborating with amazing people. i hope i will get the chance to Work with you  stay safe and HAPPY CODING 🧢  ~nonso martin~"
    ],
+   
  footerData:[
   {
    title: "Products",
@@ -197,6 +207,7 @@
     _3: "Leadership",
     _4: 'Others',
   }],
+  
 }
 
 export {_data}

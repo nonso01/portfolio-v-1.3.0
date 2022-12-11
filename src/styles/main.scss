@@ -3,18 +3,140 @@
 @import url("/src/styles/animate.css");
 @import url("/src/styles/media.css");
 
+$im: !important;
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
-  font-family: "Kanit";
+  font-family: inherit;
 }
 
 :root{
   --kanit: "Kanit",sans-serif;
   --rubik: "Rubik Distressed", var(--kanit);
+  --default-font-size: 15.5px;
+  --responsive-font-size-text: clamp(.9rem,10vmin,1.2rem);
+  --responsive-font-size-text-medium: clamp(1.2rem, 15vmin, 1.6rem);
+  --responsive-font-size-text-large: clamp(2rem,20vmin,2.5rem); 
+  --responsive-font-size-text-xlarge: clamp(4rem,25vmin,5rem);
+  --responsive-font-size-text-small: clamp(.8rem, 8vmin, .95rem);
   
+  --theme-primary: #30e8a8;
+  --theme-secondary: #23223a;
+  --theme-tertiary: ;
+  --ts: transparent;
   
+  --max-width: 1440px;
+  --max-height: 100vmax;
+  --min-height: 100vmin;
+  --standard-height: 100vh;
+  --standard-width: 100%;
+  
+  --cn: center;
+  --aut: auto;
+  --rad: .6516rem;
+  --debbug: 2px solid red;
+  --debbug-bg: indianred;
+  
+  --line-height: calc(40 * 0.01ex);
+  --letter-space: clamp(.13rem,.5vmin,.16rem);
+  
+}
+
+h1,
+h2,h3,
+h4,h5,h6,
+p,span,a,pre,
+code,attr,kbd,button, input,
+textarea,title{
+  font-kerning: none;
+  font-optical-sizing: auto;
+  font-size-adjust: ex-height;
+  font-variant-numeric: slashed-zero;
+  font-family: var(--kanit);
+  line-height: 1.4;
+  color: var(--theme-secondary);
+}
+
+img{
+  min-width: var(--standard-width);
+  min-height: var(--standard-width);
+  vertical-align: 50%;
+}
+a{
+  text-decoration-line: none;
+  color: var(--theme-primary);
+}
+textarea, button, input{
+  outline-color: var(--ts);
+  border-radius: var(--rad);
+}
+/**
+* html root and body
+*/
+html{
+  font-size: var(--default-font-size);
+  width: var(--max-width);
+  min-height: var(--max-height);
+  body{
+    width: inherit;
+    min-height: inherit;
+  }
+}
+
+/**
+* .hd elements for larger screens
+*/
+.hd
+{
+  h1 {
+    font-size: var(--responsive-font-size-text-xlarge);
+    letter-spacing: var(--letter-space);
+    height: max-content;
+    padding-inline: 1.5%;
+
+    span{
+      font-weight: 400;
+      font-family: var(--rubik);
+      color: var(--theme-primary);
+    }
+  }
+}
+/**
+* attached media queries look into bootsrap breakpoint
+*/
+@media screen and (min-width: 340px) and (max-width: 800px){
+  html{
+    width: var(--standard-width);
+  }
+  
+  .hd
+  {
+    h1 {
+      font-size: var(--responsive-font-size-text-medium);
+    }
+  }
+}
+
+/**
+* motion default
+*/
+@media screen and (prefers-reduced-motion: reduce){
+  * 
+  {
+   animation: none 0.001ms auto 1 $im;
+   transition-duration: 0.001ms $im;
+  }
+}
+/**
+* system theme
+*/
+@media screen and (prefers-color-scheme: dark){
+  :root
+  {
+    --theme-primary: ;
+    --theme-secondary: ;
+    --theme-tertiary: ;
+  }
 }

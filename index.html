@@ -4,14 +4,14 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no">
-  <meta name="frontend developer" content=" A little walk through a frontend developer's portfolio">
+  <meta name="frontend developer" content="A day in the life of a frontend dev">
   <meta name="robots" content="index, follow">
   <meta name="twitter:title" content="JavaScript developer">
-  <meta name="twitter:description" content="A Frontend developer ready to create outstanding products.">
+  <meta name="twitter:description" content="Doing Web stuffs that clients love ">
   <meta name="twitter:image" content="/assets/my-logos/logo.png">
   <meta name="twitter:site" content="@NonsoMartin6">
   <meta name="twitter:creator" content="@NonsoMartin6">
-  <meta name="theme-color" content="">
+  <meta name="theme-color" content="#30e8a8">
 
  <title>NONSO MARTIN</title>
  <link rel="canonical" href="https://nonso01.netlify.app">
@@ -28,20 +28,31 @@
 <body>
 
 <div id="app">
- <h1 v-html="hi"></h1>
-  
-  
-  
-  <button @click="inc" >number: {{number}}</button>
-  
-  <span class="s"></span>
+      <div class="hd">
+        
+       <div class="hd__nav">
+         <nav class="fixed__bottom">
+           
+         </nav>
+       </div> 
+       
+       <div>
+         <h1 class="hd__name">
+        Hello! my name is <span>{{nonso01}}<span></h1>
+       </div>
+      </div>
+   
 
 </div>
 
 <!-- only js after this Line-->
-
+  
 <script src="/src/scripts/main.js" type="module"></script>
-<script src="/src/scripts/animate.js" type="module"></script>
+<script src="/src/scripts/animate.js"   type="module"></script>
+
 <script src="https://kit.fontawesome.com/5722dffcdf.js" crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>
