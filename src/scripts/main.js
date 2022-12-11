@@ -4,7 +4,7 @@ import {resize} from "/src/scripts/resize.js"
 import {createApp} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 
-const c=console
+const c = console
 
  function dq(x) {
    return document.querySelector(x)
@@ -15,11 +15,11 @@ const c=console
  }
  
  
-const HEADER= createApp({
+const header = createApp({
   data(){
     
     return {
-      
+      nonso01: _data?.name?? "Nonso"
     }
   },
  
@@ -35,6 +35,6 @@ const HEADER= createApp({
    
  }
   
-}).mount("#app")
+}).mount(".hd")
 
 
